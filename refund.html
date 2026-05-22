@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bedaya 7-day conditional refund policy. Fair to you, fair to us.">
+<title>Refund Policy · Bedaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nile-dark: #0E4751; --nile: #1A6573; --nile-soft: #2E7B89;
+    --terra: #C8511C; --terra-deep: #9C3D11; --terra-bright: #E66830;
+    --sand: #C9A876; --sand-light: #E8D7B5;
+    --cream: #FBF8F0; --cream-warm: #F5EBD6;
+    --ink: #1A1A1A; --ink-soft: #3A3530; --mid: #7A746B;
+    --gold: #C9A14A; --gold-bright: #F0C040; --highlighter: #FFE8A8;
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Crimson Pro', Georgia, serif;
+    --font-numeric: 'Bebas Neue', 'Arial Black', sans-serif;
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --font-ar-display: 'Amiri', serif;
+    --font-ar-body: 'Tajawal', 'Arial', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--ink); background: var(--cream); line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; background: var(--cream); border-bottom: 2px solid var(--terra); z-index: 100; padding: 16px 0; }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .logo { font-family: var(--font-display); font-weight: 900; font-size: 30px; color: var(--nile-dark); letter-spacing: -0.01em; line-height: 1; }
+  .logo-ar { font-family: var(--font-ar-display); font-weight: 700; color: var(--terra); font-size: 26px; line-height: 1; }
+  .logo-mark { display: flex; align-items: baseline; gap: 14px; text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--ink); text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  .nav-links a:hover { color: var(--terra); }
+  .btn-primary { background: var(--terra); color: var(--cream); padding: 10px 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease; }
+  .btn-primary:hover { background: var(--terra-deep); transform: translateY(-2px); }
+
+  /* PAGE HEADER — bilingual two-column */
+  .page-header { padding: 64px 0 48px; }
+  .header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+  .breadcrumb { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  .breadcrumb-ar { font-family: var(--font-ar-display); font-size: 15px; color: var(--nile-dark); font-weight: 700; margin-bottom: 16px; direction: rtl; text-align: right; }
+  .page-title { font-family: var(--font-display); font-weight: 900; font-size: 56px; line-height: 0.98; color: var(--nile-dark); letter-spacing: -0.025em; margin-bottom: 16px; }
+  .page-title .accent { color: var(--terra); }
+  .page-title-ar { font-family: var(--font-ar-display); font-size: 50px; color: var(--nile-dark); line-height: 1.05; font-weight: 700; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .page-title-ar .accent { color: var(--terra); }
+  .page-subtitle { font-family: var(--font-body); font-size: 18px; color: var(--ink-soft); line-height: 1.55; font-style: italic; }
+  .page-subtitle-ar { font-family: var(--font-ar-body); font-size: 18px; color: var(--ink-soft); line-height: 1.7; direction: rtl; text-align: right; }
+  .page-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; font-weight: 700; margin-top: 32px; padding-top: 20px; border-top: 1.5px solid var(--sand); display: flex; justify-content: space-between; }
+  .page-meta-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--mid); font-weight: 700; }
+
+  /* BILINGUAL SECTION */
+  .content { padding: 16px 0 96px; }
+  .section { margin-bottom: 56px; }
+  .section-num { font-family: var(--font-numeric); font-size: 42px; color: var(--terra); line-height: 1; margin-bottom: 8px; }
+  .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .section-en h2 { font-family: var(--font-display); font-weight: 900; font-size: 28px; color: var(--nile-dark); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.015em; }
+  .section-ar h2 { font-family: var(--font-ar-display); font-weight: 700; font-size: 28px; color: var(--nile-dark); line-height: 1.15; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .section-en h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--nile-dark); line-height: 1.2; margin: 24px 0 8px; }
+  .section-ar h3 { font-family: var(--font-ar-display); font-weight: 700; font-size: 19px; color: var(--nile-dark); line-height: 1.2; direction: rtl; text-align: right; margin: 24px 0 8px; }
+  .section-en p { font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 14px; }
+  .section-ar p { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.8; color: var(--ink-soft); direction: rtl; text-align: right; margin-bottom: 14px; }
+  .section-en p strong, .section-ar p strong { color: var(--terra); font-weight: 700; }
+  .section-en p em, .section-ar p em { color: var(--terra-deep); font-style: italic; }
+  .section-en ul, .section-ar ul { margin: 12px 0 20px 0; padding-left: 0; list-style: none; }
+  .section-en li { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--ink-soft); padding: 5px 0 5px 22px; position: relative; }
+  .section-ar li { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.7; color: var(--ink-soft); padding: 5px 22px 5px 0; position: relative; direction: rtl; text-align: right; }
+  .section-en li::before { content: '→'; position: absolute; left: 0; color: var(--terra); font-weight: 700; }
+  .section-ar li::before { content: '←'; position: absolute; right: 0; color: var(--terra); font-weight: 700; }
+  .section-en a, .section-ar a { color: var(--terra); text-decoration: underline; text-underline-offset: 3px; }
+  .section-en a:hover, .section-ar a:hover { color: var(--terra-deep); }
+
+  /* CALLOUT — bilingual */
+  .callout { background: var(--cream-warm); border-left: 4px solid var(--terra); padding: 24px 28px; margin: 32px 0; }
+  .callout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .callout-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+  .callout-label-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--terra); font-weight: 700; direction: rtl; text-align: right; margin-bottom: 8px; }
+  .callout-en p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--ink); margin-bottom: 6px; }
+  .callout-ar p { font-family: var(--font-ar-body); font-size: 15px; line-height: 1.7; color: var(--ink); direction: rtl; text-align: right; margin-bottom: 6px; }
+  .callout-en p strong, .callout-ar p strong { color: var(--terra); font-weight: 700; }
+
+  /* STORY CARD — bilingual dark band */
+  .story-card { background: var(--nile-dark); color: var(--cream); padding: 40px 36px; margin: 32px 0; }
+  .story-card .callout-grid { gap: 48px; }
+  .story-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-bright); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .story-label-ar { font-family: var(--font-ar-display); font-size: 14px; color: var(--gold-bright); font-weight: 700; margin-bottom: 12px; direction: rtl; text-align: right; }
+  .story-card h3 { color: var(--cream); margin-top: 0; }
+  .story-card p { color: var(--sand-light); }
+  .story-card p strong { color: var(--terra-bright); }
+
+  /* FOOTER */
+  .footer { background: var(--nile-dark); color: var(--sand-light); padding: 48px 0 24px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+  .footer h4 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terra-bright); margin-bottom: 16px; font-weight: 700; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 8px; }
+  .footer a { font-family: var(--font-body); color: var(--sand-light); text-decoration: none; font-size: 14px; }
+  .footer a:hover { color: var(--terra-bright); }
+  .footer-brand .logo { color: var(--cream); }
+  .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--sand); margin-top: 12px; line-height: 1.5; }
+  .footer-est { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--terra-bright); text-transform: uppercase; font-weight: 700; margin-top: 16px; display: flex; align-items: center; gap: 10px; }
+  .footer-est::before, .footer-est::after { content: ''; flex: 0 0 14px; height: 1px; background: var(--terra-bright); opacity: 0.5; }
+  .footer-est::after { flex: 1; }
+  .footer-bottom { border-top: 1px solid rgba(245, 235, 214, 0.15); padding-top: 24px; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .page-title { font-size: 40px; }
+    .page-title-ar { font-size: 36px; }
+    .header-grid, .section-grid, .callout-grid, .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { gap: 16px; }
+    .nav-links a:not(.btn-primary) { display: none; }
+  }
+  @media (max-width: 560px) {
+    .container, .nav-inner { padding: 0 20px; }
+    .page-title { font-size: 32px; }
+    .page-title-ar { font-size: 30px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .section-en h2, .section-ar h2 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo-mark">
+      <span class="logo">Bedaya</span>
+      <span class="logo-ar">بِدَايَة</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#modules">Modules</a>
+      <a href="/about.html">About</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#pricing" class="btn-primary">Get started</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header">
+  <div class="container">
+    <div class="header-grid">
+      <div>
+        <div class="breadcrumb">Legal</div>
+        <h1 class="page-title">Refund <span class="accent">Policy.</span></h1>
+        <p class="page-subtitle">Fair to you. Fair to us. Plain English. No fine-print traps.</p>
+      </div>
+      <div>
+        <div class="breadcrumb-ar">سياسة الاسترداد</div>
+        <h1 class="page-title-ar">سياسة <span class="accent">الاسترداد.</span></h1>
+        <p class="page-subtitle-ar">عادل ليك. عادل لينا. كلام بسيط. مفيش حروف صغيرة بتاع فخاخ.</p>
+      </div>
+    </div>
+    <div class="page-meta">
+      <span>Effective · 20 May 2026</span>
+      <span class="page-meta-ar">ساري · ٢٠ مايو ٢٠٢٦</span>
+    </div>
+  </div>
+</section>
+
+<section class="content container">
+  <div class="callout">
+    <div class="callout-grid">
+      <div class="callout-en">
+        <div class="callout-label">→ The short version</div>
+        <p><strong>7-day conditional refund.</strong> If you've downloaded fewer than 3 files from your kit and it's not what you expected, reply to your delivery email with "refund please" within 7 days of purchase. We refund the full amount within 5 business days. Once you've downloaded 3+ files, the kit has been substantively consumed and refunds no longer apply.</p>
+      </div>
+      <div class="callout-ar">
+        <div class="callout-label-ar">النسخة المختصرة ←</div>
+        <p><strong>استرجاع مشروط لمدة ٧ أيام.</strong> لو حملت أقل من ٣ ملفات من الكيت والكيت مش اللي توقعته، رد على إيميل التسليم بكلمة "refund please" خلال ٧ أيام من الشراء. بنرجع المبلغ الكامل خلال ٥ أيام عمل. لو حملت ٣ ملفات أو أكتر، الكيت اعتُبر مستهلك واقعياً والاسترجاع ما يطبقش.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">01</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Why a conditional policy</h2>
+    <p>Digital products have a unique problem: the entire product can be consumed before a refund is requested. A "30-day no questions" policy on a downloadable PDF is essentially free product for anyone who plans ahead.</p>
+    <p>We chose a 7-day conditional policy because it does two things at once: <strong>it protects you</strong> if the kit isn't what you expected — you can refund after a quick look — and <strong>it protects us</strong> from people who consume the entire library and then ask for their money back.</p>
+    <p>If you're a serious founder, you'll know within the first 1-2 downloads whether Bedaya fits where you are. If it doesn't, refund. If it does, keep building.</p></div>
+      <div class="section-ar"><h2>ليه سياسة مشروطة</h2>
+    <p>المنتجات الرقمية فيها مشكلة فريدة: المنتج كله ممكن يتستهلك قبل ما يتطلب استرجاع. سياسة "٣٠ يوم من غير أسئلة" على PDF قابل للتحميل بتبقى عملياً منتج مجاني لأي حد بيخطط مسبقاً.</p>
+    <p>إحنا اخترنا سياسة مشروطة لـ٧ أيام لأنها بتعمل حاجتين في وقت واحد: <strong>بتحميك</strong> لو الكيت مش اللي توقعته — تقدر تسترجع بعد نظرة سريعة — و<strong>بتحمينا</strong> من الناس اللي بتستهلك المكتبة كاملة وبعدين تطلب فلوسها.</p>
+    <p>لو أنت مؤسس جاد، هتعرف خلال أول ١-٢ تحميل لو بداية بتناسبك ولا لأ. لو ما بتناسبكش، استرجع. لو بتناسبك، كمّل البناء.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">02</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>How to request a refund</h2>
+    <p>Three things must be true for a refund to process:</p>
+    <ul>
+      <li><strong>1 — Within 7 days</strong> of purchase</li>
+      <li><strong>2 — Fewer than 3 files downloaded</strong> (tracked automatically)</li>
+      <li><strong>3 — Reply to your delivery email</strong> with the words "refund please"</li>
+    </ul>
+    <p>If all three are true, we process within <strong>5 business days</strong> back to your original payment method via Paymob.</p></div>
+      <div class="section-ar"><h2>إزاي تطلب استرجاع</h2>
+    <p>تلات حاجات لازم تكون متحققة عشان الاسترجاع يتم:</p>
+    <ul>
+      <li><strong>١ — خلال ٧ أيام</strong> من الشراء</li>
+      <li><strong>٢ — أقل من ٣ ملفات تم تحميلها</strong> (بنتابع تلقائي)</li>
+      <li><strong>٣ — رد على إيميل التسليم</strong> بكلمة "refund please"</li>
+    </ul>
+    <p>لو التلاتة صح، بنعالج خلال <strong>٥ أيام عمل</strong> لطريقة الدفع الأصلية عن طريق Paymob.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">03</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>What counts as a "file"</h2>
+    <p>Each kit contains multiple files: a PDF guide, a spreadsheet calculator, prompt library exports, supplementary templates. A "file" is any single downloadable asset on your kit's delivery page. Re-downloading the same file does not count as separate.</p>
+    <p>For Module 01, the files are: the main bilingual PDF, the pricing calculator (EN), and the pricing calculator (AR). Once all 3 are downloaded, the kit is considered substantively consumed.</p></div>
+      <div class="section-ar"><h2>إيه اللي بيتعد "ملف"</h2>
+    <p>كل كيت فيه ملفات متعددة: PDF الدليل، حاسبة Excel، تصدير مكتبة البرومبتات، وقوالب إضافية. "الملف" هو أي عنصر منفرد قابل للتحميل في صفحة التسليم. إعادة تحميل نفس الملف ما بيتعدش مرة منفصلة.</p>
+    <p>للموديول الأول، الملفات هي: الـPDF الرئيسي ثنائي اللغة، حاسبة التسعير (إنجليزي)، وحاسبة التسعير (عربي). لما التلاتة يتحملوا، الكيت بيعتُبر مستهلك واقعياً.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">04</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>What's not refundable</h2>
+    <ul>
+      <li>Purchases more than <strong>7 days</strong> old</li>
+      <li>Kits where 3+ files have been downloaded</li>
+      <li>Bundles where the buyer has accessed 3+ files across any bundled modules</li>
+      <li>Founder's Edition tier after community access has been used</li>
+      <li>Refund requests made through channels other than delivery email reply</li>
+    </ul></div>
+      <div class="section-ar"><h2>اللي مش قابل للاسترجاع</h2>
+    <ul>
+      <li>المشتريات اللي عدّى عليها أكتر من <strong>٧ أيام</strong></li>
+      <li>الكيتس اللي اتحمل منها ٣ ملفات أو أكتر</li>
+      <li>الباقات اللي المشتري وصل فيها لـ٣ ملفات أو أكتر عبر أي موديولز في الباقة</li>
+      <li>شريحة Founder's Edition بعد ما تم استخدام وصول المجتمع</li>
+      <li>طلبات الاسترجاع اللي بتيجي من قنوات تانية غير الرد على إيميل التسليم</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">05</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Bundle and library refunds</h2>
+    <p>For multi-module bundles (Starter, Complete, Founder's Edition):</p>
+    <ul>
+      <li>The 3-file threshold applies <strong>across all modules in the bundle</strong>, not per-module</li>
+      <li>Partial refunds (refunding one module from a bundle) are not offered. Refunds are full-bundle or nothing.</li>
+    </ul></div>
+      <div class="section-ar"><h2>استرجاع الباقات والمكتبة</h2>
+    <p>للباقات اللي فيها أكتر من موديول (Starter، Complete، Founder's Edition):</p>
+    <ul>
+      <li>حد الـ٣ ملفات بيطبق <strong>على كل موديولز الباقة</strong>، مش لكل موديول لوحده</li>
+      <li>الاسترجاع الجزئي (استرجاع موديول واحد من باقة) مش متاح. الاسترجاع باقة كاملة أو ولا حاجة.</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">06</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>What happens after a refund</h2>
+    <ul>
+      <li>Full amount back to your original payment method within 5 business days (Paymob's processing time)</li>
+      <li>Your download link is <strong>deactivated immediately</strong> — please delete local copies, continued use violates the license</li>
+      <li>Your email is removed from kit-specific update lists; you remain on the general newsletter unless you unsubscribe</li>
+      <li>You may purchase from Bedaya again in the future — no permanent block</li>
+    </ul></div>
+      <div class="section-ar"><h2>اللي بيحصل بعد الاسترجاع</h2>
+    <ul>
+      <li>المبلغ الكامل بيرجع لطريقة الدفع الأصلية خلال ٥ أيام عمل (وقت معالجة Paymob)</li>
+      <li>لينك التحميل بتاعك <strong>بيتعطل فوراً</strong> — ياريت تحذف النسخ المحلية، الاستخدام المستمر بيخالف الترخيص</li>
+      <li>إيميلك بينشال من قوايم تحديثات الكيت؛ هتفضل في النشرة الإخبارية العامة لحد ما تلغي الاشتراك</li>
+      <li>تقدر تشتري من بداية تاني في المستقبل — مفيش حظر دائم</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">07</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>If something goes wrong with your kit</h2>
+    <p>If the kit isn't loading, the link is broken, or there's a content issue, contact us <em>first</em> at <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. We'll fix it. We don't want anyone refunding because of a technical issue we can resolve in 10 minutes.</p>
+    <p>Technical fixes don't count as "downloads" against the 3-file threshold.</p></div>
+      <div class="section-ar"><h2>لو حصل غلط في الكيت</h2>
+    <p>لو الكيت مش بيفتح، اللينك مكسور، أو فيه مشكلة في المحتوى، اتواصل معانا <em>الأول</em> على <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. هنصلحها. مش عاوزين حد يسترجع بسبب مشكلة تقنية نقدر نحلها في ١٠ دقايق.</p>
+    <p>الإصلاحات التقنية ما بتتعدش "تحميلات" ضمن حد الـ٣ ملفات.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">08</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Chargebacks</h2>
+    <p>If you initiate a chargeback through your bank instead of contacting us first, your Bedaya account is suspended pending resolution. We'd rather hear from you directly — it's faster for everyone.</p></div>
+      <div class="section-ar"><h2>التراجع البنكي (Chargebacks)</h2>
+    <p>لو بدأت تراجع بنكي من بنكك بدل ما تتواصل معانا الأول، حسابك في بداية بيتعلق لحد ما تتحل المسألة. إحنا نفضّل نسمع منك مباشرة — أسرع للجميع.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">09</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Questions</h2>
+    <p>If you're not sure whether you qualify, or want to discuss before requesting, email <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. We respond within 1 business day.</p></div>
+      <div class="section-ar"><h2>أسئلة</h2>
+    <p>لو مش متأكد إنك مستوفي الشروط، أو عاوز تناقش قبل ما تطلب، ابعت إيميل لـ<a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. بنرد خلال يوم عمل.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark">
+          <span class="logo" style="color: var(--cream);">Bedaya</span>
+          <span class="logo-ar">بِدَايَة</span>
+        </a>
+        <p class="footer-tagline">Your business starts here.<br>شغلك يبدأ من هنا.</p>
+        <div class="footer-est">Est. MMXXVI · Cairo</div>
+      </div>
+      <div>
+        <h4>Bedaya</h4>
+        <ul>
+          <li><a href="/#modules">Modules</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BEDAYA · بداية</span>
+      <span>Made in Cairo, for Egyptian founders.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

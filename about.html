@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bedaya is built for Egyptian founders. AI-powered toolkits that help you validate, build, and launch — without becoming an AI expert.">
+<title>About · Bedaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nile-dark: #0E4751; --nile: #1A6573; --nile-soft: #2E7B89;
+    --terra: #C8511C; --terra-deep: #9C3D11; --terra-bright: #E66830;
+    --sand: #C9A876; --sand-light: #E8D7B5;
+    --cream: #FBF8F0; --cream-warm: #F5EBD6;
+    --ink: #1A1A1A; --ink-soft: #3A3530; --mid: #7A746B;
+    --gold: #C9A14A; --gold-bright: #F0C040; --highlighter: #FFE8A8;
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Crimson Pro', Georgia, serif;
+    --font-numeric: 'Bebas Neue', 'Arial Black', sans-serif;
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --font-ar-display: 'Amiri', serif;
+    --font-ar-body: 'Tajawal', 'Arial', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--ink); background: var(--cream); line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; background: var(--cream); border-bottom: 2px solid var(--terra); z-index: 100; padding: 16px 0; }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .logo { font-family: var(--font-display); font-weight: 900; font-size: 30px; color: var(--nile-dark); letter-spacing: -0.01em; line-height: 1; }
+  .logo-ar { font-family: var(--font-ar-display); font-weight: 700; color: var(--terra); font-size: 26px; line-height: 1; }
+  .logo-mark { display: flex; align-items: baseline; gap: 14px; text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--ink); text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  .nav-links a:hover { color: var(--terra); }
+  .btn-primary { background: var(--terra); color: var(--cream); padding: 10px 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease; }
+  .btn-primary:hover { background: var(--terra-deep); transform: translateY(-2px); }
+
+  /* PAGE HEADER — bilingual two-column */
+  .page-header { padding: 64px 0 48px; }
+  .header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+  .breadcrumb { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  .breadcrumb-ar { font-family: var(--font-ar-display); font-size: 15px; color: var(--nile-dark); font-weight: 700; margin-bottom: 16px; direction: rtl; text-align: right; }
+  .page-title { font-family: var(--font-display); font-weight: 900; font-size: 56px; line-height: 0.98; color: var(--nile-dark); letter-spacing: -0.025em; margin-bottom: 16px; }
+  .page-title .accent { color: var(--terra); }
+  .page-title-ar { font-family: var(--font-ar-display); font-size: 50px; color: var(--nile-dark); line-height: 1.05; font-weight: 700; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .page-title-ar .accent { color: var(--terra); }
+  .page-subtitle { font-family: var(--font-body); font-size: 18px; color: var(--ink-soft); line-height: 1.55; font-style: italic; }
+  .page-subtitle-ar { font-family: var(--font-ar-body); font-size: 18px; color: var(--ink-soft); line-height: 1.7; direction: rtl; text-align: right; }
+  .page-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; font-weight: 700; margin-top: 32px; padding-top: 20px; border-top: 1.5px solid var(--sand); display: flex; justify-content: space-between; }
+  .page-meta-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--mid); font-weight: 700; }
+
+  /* BILINGUAL SECTION */
+  .content { padding: 16px 0 96px; }
+  .section { margin-bottom: 56px; }
+  .section-num { font-family: var(--font-numeric); font-size: 42px; color: var(--terra); line-height: 1; margin-bottom: 8px; }
+  .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .section-en h2 { font-family: var(--font-display); font-weight: 900; font-size: 28px; color: var(--nile-dark); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.015em; }
+  .section-ar h2 { font-family: var(--font-ar-display); font-weight: 700; font-size: 28px; color: var(--nile-dark); line-height: 1.15; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .section-en h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--nile-dark); line-height: 1.2; margin: 24px 0 8px; }
+  .section-ar h3 { font-family: var(--font-ar-display); font-weight: 700; font-size: 19px; color: var(--nile-dark); line-height: 1.2; direction: rtl; text-align: right; margin: 24px 0 8px; }
+  .section-en p { font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 14px; }
+  .section-ar p { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.8; color: var(--ink-soft); direction: rtl; text-align: right; margin-bottom: 14px; }
+  .section-en p strong, .section-ar p strong { color: var(--terra); font-weight: 700; }
+  .section-en p em, .section-ar p em { color: var(--terra-deep); font-style: italic; }
+  .section-en ul, .section-ar ul { margin: 12px 0 20px 0; padding-left: 0; list-style: none; }
+  .section-en li { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--ink-soft); padding: 5px 0 5px 22px; position: relative; }
+  .section-ar li { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.7; color: var(--ink-soft); padding: 5px 22px 5px 0; position: relative; direction: rtl; text-align: right; }
+  .section-en li::before { content: '→'; position: absolute; left: 0; color: var(--terra); font-weight: 700; }
+  .section-ar li::before { content: '←'; position: absolute; right: 0; color: var(--terra); font-weight: 700; }
+  .section-en a, .section-ar a { color: var(--terra); text-decoration: underline; text-underline-offset: 3px; }
+  .section-en a:hover, .section-ar a:hover { color: var(--terra-deep); }
+
+  /* CALLOUT — bilingual */
+  .callout { background: var(--cream-warm); border-left: 4px solid var(--terra); padding: 24px 28px; margin: 32px 0; }
+  .callout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .callout-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+  .callout-label-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--terra); font-weight: 700; direction: rtl; text-align: right; margin-bottom: 8px; }
+  .callout-en p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--ink); margin-bottom: 6px; }
+  .callout-ar p { font-family: var(--font-ar-body); font-size: 15px; line-height: 1.7; color: var(--ink); direction: rtl; text-align: right; margin-bottom: 6px; }
+  .callout-en p strong, .callout-ar p strong { color: var(--terra); font-weight: 700; }
+
+  /* STORY CARD — bilingual dark band */
+  .story-card { background: var(--nile-dark); color: var(--cream); padding: 40px 36px; margin: 32px 0; }
+  .story-card .callout-grid { gap: 48px; }
+  .story-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-bright); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .story-label-ar { font-family: var(--font-ar-display); font-size: 14px; color: var(--gold-bright); font-weight: 700; margin-bottom: 12px; direction: rtl; text-align: right; }
+  .story-card h3 { color: var(--cream); margin-top: 0; }
+  .story-card p { color: var(--sand-light); }
+  .story-card p strong { color: var(--terra-bright); }
+
+  /* FOOTER */
+  .footer { background: var(--nile-dark); color: var(--sand-light); padding: 48px 0 24px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+  .footer h4 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terra-bright); margin-bottom: 16px; font-weight: 700; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 8px; }
+  .footer a { font-family: var(--font-body); color: var(--sand-light); text-decoration: none; font-size: 14px; }
+  .footer a:hover { color: var(--terra-bright); }
+  .footer-brand .logo { color: var(--cream); }
+  .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--sand); margin-top: 12px; line-height: 1.5; }
+  .footer-est { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--terra-bright); text-transform: uppercase; font-weight: 700; margin-top: 16px; display: flex; align-items: center; gap: 10px; }
+  .footer-est::before, .footer-est::after { content: ''; flex: 0 0 14px; height: 1px; background: var(--terra-bright); opacity: 0.5; }
+  .footer-est::after { flex: 1; }
+  .footer-bottom { border-top: 1px solid rgba(245, 235, 214, 0.15); padding-top: 24px; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .page-title { font-size: 40px; }
+    .page-title-ar { font-size: 36px; }
+    .header-grid, .section-grid, .callout-grid, .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { gap: 16px; }
+    .nav-links a:not(.btn-primary) { display: none; }
+  }
+  @media (max-width: 560px) {
+    .container, .nav-inner { padding: 0 20px; }
+    .page-title { font-size: 32px; }
+    .page-title-ar { font-size: 30px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .section-en h2, .section-ar h2 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo-mark">
+      <span class="logo">Bedaya</span>
+      <span class="logo-ar">بِدَايَة</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#modules">Modules</a>
+      <a href="/about.html">About</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#pricing" class="btn-primary">Get started</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header">
+  <div class="container">
+    <div class="header-grid">
+      <div>
+        <div class="breadcrumb">About</div>
+        <h1 class="page-title">Why <span class="accent">Bedaya</span> exists.</h1>
+        <p class="page-subtitle">Tools — not lectures — for the founder you're about to become.</p>
+      </div>
+      <div>
+        <div class="breadcrumb-ar">من هي بداية</div>
+        <h1 class="page-title-ar">ليه <span class="accent">بداية</span> موجودة.</h1>
+        <p class="page-subtitle-ar">أدوات — مش محاضرات — للمؤسس اللي على وشك تبقاه.</p>
+      </div>
+    </div>
+    <div class="page-meta">
+      <span>Last updated · 20 May 2026</span>
+      <span class="page-meta-ar">آخر تحديث · ٢٠ مايو ٢٠٢٦</span>
+    </div>
+  </div>
+</section>
+
+<section class="content container">
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>The starting point</h2>
+    <p>Egypt is full of smart people with real business ideas — and most of them never test them. The reasons are familiar: consulting hours cost more than rent, "starting a business" content is mostly recycled American advice, and the local market has its own rules that no MBA case study captures.</p>
+    <p>So an idea sits in a notes app for two years. Then someone else launches a worse version and takes the market.</p>
+    <p>Bedaya was built to close that gap.</p></div>
+      <div class="section-ar"><h2>نقطة البداية</h2>
+    <p>مصر فيها ناس شاطرة بأفكار شغل حقيقية — ومعظمهم عمرهم ما اختبروها. الأسباب معروفة: ساعة الاستشاري بتكلف أكتر من الإيجار، محتوى "إزاي تبدأ شغلك" معظمه نصايح أمريكية معاد تدويرها، والسوق المحلي عنده قواعد لوحده ولا كتاب MBA يقدر يلمّها.</p>
+    <p>وبكده الفكرة بتقعد في تطبيق الملاحظات سنتين. وبعدين حد تاني بيطلق نسخة أوحش وبياخد السوق.</p>
+    <p>بداية اتبنت عشان تسد الفجوة دي.</p></div>
+    </div>
+  </div>
+  
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>What changed</h2>
+    <p>Until recently, validating a business idea well meant 6+ months of customer research, market sizing, financial modeling, and pitch iteration — work that cost <strong>tens of thousands of pounds</strong> if you hired help, or hundreds of hours if you did it alone.</p>
+    <p>AI has collapsed that. The same work — done well — now takes a single founder about a week. <em>If</em> they have the right prompts, the right framework, and the discipline to use them honestly.</p>
+    <p>Most founders don't have those things, so they either skip the work entirely or use AI as a yes-machine that confirms whatever they already wanted to do.</p>
+    <p>Bedaya provides the prompts, the framework, and a scorecard you can't game.</p></div>
+      <div class="section-ar"><h2>اللي اتغير</h2>
+    <p>لحد قريب، تتحقق من فكرة شغلك صح كان معناه ٦ شهور+ من بحث العملاء، حساب السوق، النمذجة المالية، ومحاولات الـpitch — شغل بيكلفك <strong>عشرات الآلاف من الجنيهات</strong> لو استعنت بحد، أو مئات الساعات لو عملته لوحدك.</p>
+    <p>الذكاء الاصطناعي اختصر ده كله. نفس الشغل — لو اتعمل صح — بياخد من مؤسس واحد أسبوع. <em>لو</em> عنده البرومبتات الصح، الإطار الصح، والانضباط يستخدمهم بصراحة.</p>
+    <p>معظم المؤسسين مش عندهم الحاجات دي، فبيتخطوا الشغل تماماً أو بيستخدموا الذكاء الاصطناعي كآلة بتوافق على كل اللي هم عاوزينه أصلاً.</p>
+    <p>بداية بتديك البرومبتات، الإطار، وشيت تقييم مش هتقدر تتلاعب فيه.</p></div>
+    </div>
+  </div>
+
+  <div class="story-card">
+    <div class="callout-grid">
+      <div>
+        <div class="story-label">→ The single belief</div>
+        <h3 style="font-family: var(--font-display); font-size: 26px; line-height: 1.2; margin-bottom: 12px; color: var(--cream);">AI helps. You decide.</h3>
+        <p style="color: var(--sand-light); font-family: var(--font-body); font-size: 15px; line-height: 1.6;">AI is the most powerful productivity tool ever built for entrepreneurs. It can do 80% of the heavy work in a fraction of the time. <strong>But it cannot decide which idea to pursue, risk your savings, or care about your outcome.</strong> You will. That's why you are the founder.</p>
+        <p style="color: var(--sand-light); font-family: var(--font-body); font-size: 15px; line-height: 1.6;">The kits multiply your judgment. They do not replace it. Anyone selling you a "fully autonomous AI business builder" is either lying or selling something that will fail because no human cared.</p>
+      </div>
+      <div>
+        <div class="story-label-ar">الفكرة الواحدة ←</div>
+        <h3 style="font-family: var(--font-ar-display); font-size: 26px; line-height: 1.3; margin-bottom: 12px; color: var(--cream); direction: rtl; text-align: right; font-weight: 700;">الذكاء الاصطناعي بيساعد. أنت بتقرر.</h3>
+        <p style="color: var(--sand-light); font-family: var(--font-ar-body); font-size: 15px; line-height: 1.75; direction: rtl; text-align: right;">الذكاء الاصطناعي أقوى أداة إنتاجية اتبنت لرواد الأعمال. يقدر يعمل ٨٠٪ من الشغل الصعب في وقت قصير. <strong>بس ما يقدرش يقرر أي فكرة تكمل فيها، يخاطر بفلوسك، أو يهتم بنتيجتك.</strong> أنت اللي هتعمل ده. عشان كده أنت المؤسس.</p>
+        <p style="color: var(--sand-light); font-family: var(--font-ar-body); font-size: 15px; line-height: 1.75; direction: rtl; text-align: right;">الكيتس بتضاعف حكمك. مش بتبدّله. أي حد بيبيعلك "ذكاء اصطناعي بيبنيلك شغلك بالكامل" يا بيكدب يا بيبيع حاجة هتفشل لأن مفيش بني آدم اهتم.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>Who built it</h2>
+    <p>Bedaya is built by an Egyptian founder who got tired of watching local talent waste years on ideas the market would have rejected in a week. The team is small. The brand is faceless on purpose — what matters is whether the kits work, not whose face is on the cover.</p>
+    <p>If you want to reach the founder directly, the Founder's Edition tier includes a direct email line. Otherwise <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a> reaches the team and gets answered.</p></div>
+      <div class="section-ar"><h2>مين بناها</h2>
+    <p>بداية اتبنت بمؤسس مصري تعب من رؤية الموهبة المحلية بتضيع سنين على أفكار السوق كان هيرفضها في أسبوع. الفريق صغير. البراند مفيش وراه وش بإصرار — اللي بيفرق هو لو الكيتس بتشتغل، مش وش مين على الكوفر.</p>
+    <p>لو عاوز توصل للمؤسس مباشرة، شريحة Founder's Edition فيها لاين إيميل مباشر. غير كده <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a> بيوصل للفريق وبيترد عليه.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>What you get when you buy</h2>
+    <ul>
+      <li>A 7-day system, fully bilingual (English + Egyptian Arabic side-by-side)</li>
+      <li>A library of investigative AI prompts you copy-paste into ChatGPT or Claude</li>
+      <li>A scorecard or framework that turns your work into a defensible decision</li>
+      <li>Lifetime access — and every update to that module, free</li>
+      <li>A <a href="/refund.html">7-day conditional refund</a> if it's not what you expected</li>
+    </ul></div>
+      <div class="section-ar"><h2>بتاخد إيه لما تشتري</h2>
+    <ul>
+      <li>نظام ٧ أيام، ثنائي اللغة بالكامل (إنجليزي وعربي مصري جنب بعض)</li>
+      <li>مكتبة برومبتات استقصائية بتنسخها مباشرة في ChatGPT أو Claude</li>
+      <li>شيت تقييم أو إطار بيحوّل شغلك لقرار مدافع عنه</li>
+      <li>وصول مدى الحياة — وكل تحديث للموديول مجاناً</li>
+      <li><a href="/refund.html">استرجاع مشروط لمدة ٧ أيام</a> لو الكيت مش اللي توقعته</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>What you don't get</h2>
+    <ul>
+      <li>A guru. A coach. A motivational webinar series.</li>
+      <li>A done-for-you service. The kits multiply your work; they don't replace it.</li>
+      <li>Promises about how much money you'll make. We don't know your idea, your market, or you.</li>
+    </ul></div>
+      <div class="section-ar"><h2>اللي مش هتاخده</h2>
+    <ul>
+      <li>جورو. كوتش. سلسلة ويبينارز تحفيزية.</li>
+      <li>خدمة مع التنفيذ. الكيتس بتضاعف شغلك، مش بتعمله بدالك.</li>
+      <li>وعود إنك هتكسب كذا. إحنا ما نعرفش فكرتك، سوقك، أو أنت.</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    
+    <div class="section-grid">
+      <div class="section-en"><h2>This is the beginning</h2>
+    <p>Module 01 is live. Module 02 (Branding) is in progress. Six more modules will follow on the published roadmap — one library, one founder journey.</p>
+    <p>If that matches where you are, <a href="/#pricing">start here</a>. If not, you'll hear from us when the next module lands.</p></div>
+      <div class="section-ar"><h2>ده البداية</h2>
+    <p>الموديول الأول متاح. الموديول التاني (البراند) جاري التطوير. ٦ موديولز كمان هيتبعوهم بحسب الخريطة المنشورة — مكتبة واحدة، رحلة مؤسس واحدة.</p>
+    <p>لو ده اللي بيناسبك، <a href="/#pricing">ابدأ من هنا</a>. لو لأ، هتسمع منا لما الموديول الجاي ينزل.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark">
+          <span class="logo" style="color: var(--cream);">Bedaya</span>
+          <span class="logo-ar">بِدَايَة</span>
+        </a>
+        <p class="footer-tagline">Your business starts here.<br>شغلك يبدأ من هنا.</p>
+        <div class="footer-est">Est. MMXXVI · Cairo</div>
+      </div>
+      <div>
+        <h4>Bedaya</h4>
+        <ul>
+          <li><a href="/#modules">Modules</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BEDAYA · بداية</span>
+      <span>Made in Cairo, for Egyptian founders.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

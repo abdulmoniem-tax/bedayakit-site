@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How Bedaya collects, uses, and protects your personal data. Compliant with Egyptian Personal Data Protection Law.">
+<title>Privacy Policy · Bedaya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nile-dark: #0E4751; --nile: #1A6573; --nile-soft: #2E7B89;
+    --terra: #C8511C; --terra-deep: #9C3D11; --terra-bright: #E66830;
+    --sand: #C9A876; --sand-light: #E8D7B5;
+    --cream: #FBF8F0; --cream-warm: #F5EBD6;
+    --ink: #1A1A1A; --ink-soft: #3A3530; --mid: #7A746B;
+    --gold: #C9A14A; --gold-bright: #F0C040; --highlighter: #FFE8A8;
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Crimson Pro', Georgia, serif;
+    --font-numeric: 'Bebas Neue', 'Arial Black', sans-serif;
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --font-ar-display: 'Amiri', serif;
+    --font-ar-body: 'Tajawal', 'Arial', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); color: var(--ink); background: var(--cream); line-height: 1.6; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; background: var(--cream); border-bottom: 2px solid var(--terra); z-index: 100; padding: 16px 0; }
+  .nav-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+  .logo { font-family: var(--font-display); font-weight: 900; font-size: 30px; color: var(--nile-dark); letter-spacing: -0.01em; line-height: 1; }
+  .logo-ar { font-family: var(--font-ar-display); font-weight: 700; color: var(--terra); font-size: 26px; line-height: 1; }
+  .logo-mark { display: flex; align-items: baseline; gap: 14px; text-decoration: none; }
+  .nav-links { display: flex; gap: 32px; align-items: center; }
+  .nav-links a { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; color: var(--ink); text-transform: uppercase; text-decoration: none; font-weight: 700; }
+  .nav-links a:hover { color: var(--terra); }
+  .btn-primary { background: var(--terra); color: var(--cream); padding: 10px 20px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; font-weight: 700; text-transform: uppercase; text-decoration: none; transition: background 0.3s ease, transform 0.3s ease; }
+  .btn-primary:hover { background: var(--terra-deep); transform: translateY(-2px); }
+
+  /* PAGE HEADER — bilingual two-column */
+  .page-header { padding: 64px 0 48px; }
+  .header-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
+  .breadcrumb { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  .breadcrumb-ar { font-family: var(--font-ar-display); font-size: 15px; color: var(--nile-dark); font-weight: 700; margin-bottom: 16px; direction: rtl; text-align: right; }
+  .page-title { font-family: var(--font-display); font-weight: 900; font-size: 56px; line-height: 0.98; color: var(--nile-dark); letter-spacing: -0.025em; margin-bottom: 16px; }
+  .page-title .accent { color: var(--terra); }
+  .page-title-ar { font-family: var(--font-ar-display); font-size: 50px; color: var(--nile-dark); line-height: 1.05; font-weight: 700; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .page-title-ar .accent { color: var(--terra); }
+  .page-subtitle { font-family: var(--font-body); font-size: 18px; color: var(--ink-soft); line-height: 1.55; font-style: italic; }
+  .page-subtitle-ar { font-family: var(--font-ar-body); font-size: 18px; color: var(--ink-soft); line-height: 1.7; direction: rtl; text-align: right; }
+  .page-meta { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em; color: var(--mid); text-transform: uppercase; font-weight: 700; margin-top: 32px; padding-top: 20px; border-top: 1.5px solid var(--sand); display: flex; justify-content: space-between; }
+  .page-meta-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--mid); font-weight: 700; }
+
+  /* BILINGUAL SECTION */
+  .content { padding: 16px 0 96px; }
+  .section { margin-bottom: 56px; }
+  .section-num { font-family: var(--font-numeric); font-size: 42px; color: var(--terra); line-height: 1; margin-bottom: 8px; }
+  .section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+  .section-en h2 { font-family: var(--font-display); font-weight: 900; font-size: 28px; color: var(--nile-dark); line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.015em; }
+  .section-ar h2 { font-family: var(--font-ar-display); font-weight: 700; font-size: 28px; color: var(--nile-dark); line-height: 1.15; direction: rtl; text-align: right; margin-bottom: 16px; }
+  .section-en h3 { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--nile-dark); line-height: 1.2; margin: 24px 0 8px; }
+  .section-ar h3 { font-family: var(--font-ar-display); font-weight: 700; font-size: 19px; color: var(--nile-dark); line-height: 1.2; direction: rtl; text-align: right; margin: 24px 0 8px; }
+  .section-en p { font-family: var(--font-body); font-size: 16px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 14px; }
+  .section-ar p { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.8; color: var(--ink-soft); direction: rtl; text-align: right; margin-bottom: 14px; }
+  .section-en p strong, .section-ar p strong { color: var(--terra); font-weight: 700; }
+  .section-en p em, .section-ar p em { color: var(--terra-deep); font-style: italic; }
+  .section-en ul, .section-ar ul { margin: 12px 0 20px 0; padding-left: 0; list-style: none; }
+  .section-en li { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--ink-soft); padding: 5px 0 5px 22px; position: relative; }
+  .section-ar li { font-family: var(--font-ar-body); font-size: 16px; line-height: 1.7; color: var(--ink-soft); padding: 5px 22px 5px 0; position: relative; direction: rtl; text-align: right; }
+  .section-en li::before { content: '→'; position: absolute; left: 0; color: var(--terra); font-weight: 700; }
+  .section-ar li::before { content: '←'; position: absolute; right: 0; color: var(--terra); font-weight: 700; }
+  .section-en a, .section-ar a { color: var(--terra); text-decoration: underline; text-underline-offset: 3px; }
+  .section-en a:hover, .section-ar a:hover { color: var(--terra-deep); }
+
+  /* CALLOUT — bilingual */
+  .callout { background: var(--cream-warm); border-left: 4px solid var(--terra); padding: 24px 28px; margin: 32px 0; }
+  .callout-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .callout-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.25em; color: var(--terra); text-transform: uppercase; font-weight: 700; margin-bottom: 8px; }
+  .callout-label-ar { font-family: var(--font-ar-display); font-size: 13px; color: var(--terra); font-weight: 700; direction: rtl; text-align: right; margin-bottom: 8px; }
+  .callout-en p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--ink); margin-bottom: 6px; }
+  .callout-ar p { font-family: var(--font-ar-body); font-size: 15px; line-height: 1.7; color: var(--ink); direction: rtl; text-align: right; margin-bottom: 6px; }
+  .callout-en p strong, .callout-ar p strong { color: var(--terra); font-weight: 700; }
+
+  /* STORY CARD — bilingual dark band */
+  .story-card { background: var(--nile-dark); color: var(--cream); padding: 40px 36px; margin: 32px 0; }
+  .story-card .callout-grid { gap: 48px; }
+  .story-label { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.3em; color: var(--gold-bright); text-transform: uppercase; font-weight: 700; margin-bottom: 12px; }
+  .story-label-ar { font-family: var(--font-ar-display); font-size: 14px; color: var(--gold-bright); font-weight: 700; margin-bottom: 12px; direction: rtl; text-align: right; }
+  .story-card h3 { color: var(--cream); margin-top: 0; }
+  .story-card p { color: var(--sand-light); }
+  .story-card p strong { color: var(--terra-bright); }
+
+  /* FOOTER */
+  .footer { background: var(--nile-dark); color: var(--sand-light); padding: 48px 0 24px; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 32px; }
+  .footer h4 { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--terra-bright); margin-bottom: 16px; font-weight: 700; }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 8px; }
+  .footer a { font-family: var(--font-body); color: var(--sand-light); text-decoration: none; font-size: 14px; }
+  .footer a:hover { color: var(--terra-bright); }
+  .footer-brand .logo { color: var(--cream); }
+  .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 16px; color: var(--sand); margin-top: 12px; line-height: 1.5; }
+  .footer-est { font-family: var(--font-mono); font-size: 9px; letter-spacing: 0.35em; color: var(--terra-bright); text-transform: uppercase; font-weight: 700; margin-top: 16px; display: flex; align-items: center; gap: 10px; }
+  .footer-est::before, .footer-est::after { content: ''; flex: 0 0 14px; height: 1px; background: var(--terra-bright); opacity: 0.5; }
+  .footer-est::after { flex: 1; }
+  .footer-bottom { border-top: 1px solid rgba(245, 235, 214, 0.15); padding-top: 24px; display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.15em; color: var(--mid); text-transform: uppercase; }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .page-title { font-size: 40px; }
+    .page-title-ar { font-size: 36px; }
+    .header-grid, .section-grid, .callout-grid, .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { gap: 16px; }
+    .nav-links a:not(.btn-primary) { display: none; }
+  }
+  @media (max-width: 560px) {
+    .container, .nav-inner { padding: 0 20px; }
+    .page-title { font-size: 32px; }
+    .page-title-ar { font-size: 30px; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .section-en h2, .section-ar h2 { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="logo-mark">
+      <span class="logo">Bedaya</span>
+      <span class="logo-ar">بِدَايَة</span>
+    </a>
+    <div class="nav-links">
+      <a href="/#modules">Modules</a>
+      <a href="/about.html">About</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/#pricing" class="btn-primary">Get started</a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="page-header">
+  <div class="container">
+    <div class="header-grid">
+      <div>
+        <div class="breadcrumb">Legal</div>
+        <h1 class="page-title">Privacy <span class="accent">Policy.</span></h1>
+        <p class="page-subtitle">What data we collect, why, and what you can do about it. Compliant with Egyptian Personal Data Protection Law (Law 151/2020).</p>
+      </div>
+      <div>
+        <div class="breadcrumb-ar">سياسة الخصوصية</div>
+        <h1 class="page-title-ar">سياسة <span class="accent">الخصوصية.</span></h1>
+        <p class="page-subtitle-ar">إيه البيانات اللي بنجمعها، ليه، وإيه اللي تقدر تعمله. متوافقة مع قانون حماية البيانات الشخصية (قانون ١٥١ لسنة ٢٠٢٠).</p>
+      </div>
+    </div>
+    <div class="page-meta">
+      <span>Effective · 20 May 2026</span>
+      <span class="page-meta-ar">ساري · ٢٠ مايو ٢٠٢٦</span>
+    </div>
+  </div>
+</section>
+
+<section class="content container">
+  <div class="callout">
+    <div class="callout-grid">
+      <div class="callout-en">
+        <div class="callout-label">→ Summary</div>
+        <p>We collect the minimum we need to deliver your product, process payment, and (if you opt in) send you emails. We do not sell your data. You can request deletion at any time.</p>
+      </div>
+      <div class="callout-ar">
+        <div class="callout-label-ar">الملخص ←</div>
+        <p>بنجمع الحد الأدنى اللي نحتاجه لتسليم منتجك، معالجة الدفع، و(لو وافقت) نبعتلك إيميلات. ما بنبيعش بياناتك. تقدر تطلب الحذف في أي وقت.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">01</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Who we are</h2>
+    <p>Bedaya is a digital toolkit publisher based in Cairo, Egypt. We operate bedayakit.com. For privacy purposes, Bedaya is the data controller of personal data collected from you.</p></div>
+      <div class="section-ar"><h2>مين إحنا</h2>
+    <p>بداية ناشر كيتس رقمية مقره القاهرة، مصر. إحنا اللي بنشغل bedayakit.com. لأغراض الخصوصية، بداية هي المتحكم في البيانات الشخصية المجمعة منك.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">02</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>What we collect</h2>
+    <h3>When you buy a product</h3>
+    <ul>
+      <li><strong>Your name</strong> — to address you in delivery and support emails</li>
+      <li><strong>Your email</strong> — to send your download link and confirmation</li>
+      <li><strong>Payment info</strong> — handled entirely by Paymob; we never see or store your card</li>
+      <li><strong>Purchase history</strong> — which kits you bought and when</li>
+    </ul>
+    <h3>When you subscribe to emails</h3>
+    <ul>
+      <li><strong>Email + first name</strong> — to send you what you signed up for</li>
+      <li><strong>Engagement data</strong> — which emails you opened (Beehiiv)</li>
+    </ul>
+    <h3>When you visit the website</h3>
+    <ul>
+      <li><strong>Standard request data</strong> — IP, browser, pages visited (Cloudflare + analytics)</li>
+      <li><strong>Cookies</strong> — only essential cookies, plus analytics cookies if you consent</li>
+    </ul></div>
+      <div class="section-ar"><h2>إيه بنجمع</h2>
+    <h3>لما تشتري منتج</h3>
+    <ul>
+      <li><strong>اسمك</strong> — عشان نخاطبك في إيميلات التسليم والدعم</li>
+      <li><strong>إيميلك</strong> — عشان نبعتلك لينك التحميل والتأكيد</li>
+      <li><strong>بيانات الدفع</strong> — بتتعالج بالكامل من Paymob؛ إحنا ما بنشوفش ولا بنخزّن كرتك</li>
+      <li><strong>تاريخ الشراء</strong> — أنهي كيتس اشتريت وإمتى</li>
+    </ul>
+    <h3>لما تشترك في الإيميلات</h3>
+    <ul>
+      <li><strong>الإيميل والاسم الأول</strong> — عشان نبعتلك اللي اشتركت فيه</li>
+      <li><strong>بيانات التفاعل</strong> — أي إيميلات فتحتها (من Beehiiv)</li>
+    </ul>
+    <h3>لما تزور الموقع</h3>
+    <ul>
+      <li><strong>بيانات الطلب القياسية</strong> — IP، المتصفح، الصفحات اللي زرتها (Cloudflare + التحليلات)</li>
+      <li><strong>كوكيز</strong> — كوكيز ضرورية بس، بالإضافة لكوكيز التحليلات لو وافقت</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">03</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Why we collect it (legal basis)</h2>
+    <p>We process your personal data under one of three legal bases recognized by Egyptian Law 151/2020:</p>
+    <ul>
+      <li><strong>Contract performance</strong> — delivering your product requires your name and email</li>
+      <li><strong>Consent</strong> — marketing emails only happen if you explicitly opt in</li>
+      <li><strong>Legitimate interest</strong> — basic analytics for site performance and fraud prevention</li>
+    </ul></div>
+      <div class="section-ar"><h2>ليه بنجمع البيانات دي (الأساس القانوني)</h2>
+    <p>إحنا بنعالج بياناتك الشخصية بناءً على واحد من ٣ أسس قانونية معترف بيها في قانون ١٥١/٢٠٢٠:</p>
+    <ul>
+      <li><strong>تنفيذ العقد</strong> — تسليم منتجك بيحتاج اسمك وإيميلك</li>
+      <li><strong>الموافقة</strong> — إيميلات التسويق بتحصل بس لو وافقت صراحة</li>
+      <li><strong>المصلحة المشروعة</strong> — تحليلات أساسية لأداء الموقع ومنع الاحتيال</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">04</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Who we share it with</h2>
+    <p>We share data only with service providers we use to operate Bedaya:</p>
+    <ul>
+      <li><strong>Paymob</strong> — payment processing</li>
+      <li><strong>Beehiiv</strong> — email platform (subscribers only)</li>
+      <li><strong>Cloudflare</strong> — hosting and CDN</li>
+      <li><strong>Make.com</strong> — workflow automation between purchase and delivery</li>
+    </ul>
+    <p>We do not sell your data to advertisers, brokers, or any third party. Ever.</p></div>
+      <div class="section-ar"><h2>بنشارك مع مين</h2>
+    <p>بنشارك البيانات بس مع موفّري الخدمة اللي بنستخدمهم لتشغيل بداية:</p>
+    <ul>
+      <li><strong>Paymob</strong> — معالجة الدفع</li>
+      <li><strong>Beehiiv</strong> — منصة الإيميل (للمشتركين بس)</li>
+      <li><strong>Cloudflare</strong> — الاستضافة وشبكة CDN</li>
+      <li><strong>Make.com</strong> — أتمتة الـworkflow بين الشراء والتسليم</li>
+    </ul>
+    <p>ما بنبيعش بياناتك لمعلنين، وسطاء، أو أي طرف تالت. أبداً.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">05</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>How long we keep it</h2>
+    <ul>
+      <li><strong>Purchase records</strong> — 7 years (Egyptian tax law)</li>
+      <li><strong>Email subscribers</strong> — until you unsubscribe, then 30 days, then deleted</li>
+      <li><strong>Analytics</strong> — anonymized after 14 months</li>
+      <li><strong>Support emails</strong> — 2 years from last contact</li>
+    </ul></div>
+      <div class="section-ar"><h2>قد إيه بنحتفظ بها</h2>
+    <ul>
+      <li><strong>سجلات الشراء</strong> — ٧ سنين (متطلب قانون الضرايب المصري)</li>
+      <li><strong>مشتركين الإيميل</strong> — لحد ما تلغي الاشتراك، بعدها ٣٠ يوم، بعدها يتحذف</li>
+      <li><strong>التحليلات</strong> — بتتجهّل (anonymized) بعد ١٤ شهر</li>
+      <li><strong>إيميلات الدعم</strong> — سنتين من آخر تواصل</li>
+    </ul></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">06</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Your rights</h2>
+    <p>Under Egyptian Personal Data Protection Law, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of your data</li>
+      <li><strong>Correct</strong> — fix data that's wrong</li>
+      <li><strong>Delete</strong> — ask us to delete (subject to tax retention obligations)</li>
+      <li><strong>Withdraw consent</strong> — unsubscribe anytime via email link</li>
+      <li><strong>Object to processing</strong> — stop us using your data for consent/legitimate-interest purposes</li>
+      <li><strong>Data portability</strong> — get your data in machine-readable format</li>
+    </ul>
+    <p>To exercise any right, email <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. We respond within 30 days.</p></div>
+      <div class="section-ar"><h2>حقوقك</h2>
+    <p>بموجب قانون حماية البيانات الشخصية المصري، عندك حق:</p>
+    <ul>
+      <li><strong>الوصول</strong> — اطلب نسخة من بياناتك</li>
+      <li><strong>التصحيح</strong> — تعديل البيانات الغلط</li>
+      <li><strong>الحذف</strong> — اطلب حذف بياناتك (مع مراعاة التزامات حفظ السجلات الضريبية)</li>
+      <li><strong>سحب الموافقة</strong> — ألغي الاشتراك في أي وقت من اللينك في الإيميل</li>
+      <li><strong>الاعتراض على المعالجة</strong> — أوقفنا من استخدام بياناتك للأغراض اللي أساسها الموافقة أو المصلحة المشروعة</li>
+      <li><strong>نقل البيانات</strong> — احصل على بياناتك في صيغة قابلة للقراءة آلياً</li>
+    </ul>
+    <p>عشان تستخدم أي حق، ابعت إيميل لـ<a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a>. بنرد خلال ٣٠ يوم.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">07</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Security</h2>
+    <p>We protect your data with reasonable technical and organizational safeguards: HTTPS encryption, access controls, secure cloud storage, and processor agreements with all our service providers. No system is 100% secure, but we apply industry standards.</p>
+    <p>In the event of a data breach affecting your personal data, we will notify you and the Egyptian Data Protection Center within 72 hours of discovery.</p></div>
+      <div class="section-ar"><h2>الأمان</h2>
+    <p>بنحمي بياناتك بإجراءات تقنية وتنظيمية معقولة: تشفير HTTPS، تحكم في الوصول، تخزين سحابي آمن، واتفاقيات معالجة مع كل موفّري الخدمة. مفيش نظام آمن ١٠٠٪، بس بنطبق معايير الصناعة.</p>
+    <p>في حالة اختراق للبيانات الشخصية بتاعتك، هنخطرك أنت ومركز حماية البيانات الشخصية المصري خلال ٧٢ ساعة من الاكتشاف.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">08</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Children</h2>
+    <p>Bedaya is intended for adults building businesses. We don't knowingly collect data from anyone under 18. If you believe a minor has provided us data, contact us and we will delete it.</p></div>
+      <div class="section-ar"><h2>الأطفال</h2>
+    <p>بداية موجّهة للبالغين اللي بيبنوا شغل. ما بنجمعش عمداً بيانات من حد تحت ١٨. لو فاكر إن قاصر قدّملنا بيانات، اتواصل معانا وهنحذفها.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">09</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>International transfers</h2>
+    <p>Some service providers (Beehiiv, Cloudflare, Make.com) are based outside Egypt. When your data leaves Egypt, we ensure it goes to jurisdictions with adequate protection or under contractual safeguards equivalent to Egyptian law.</p></div>
+      <div class="section-ar"><h2>النقل الدولي</h2>
+    <p>بعض موفّري الخدمة (Beehiiv، Cloudflare، Make.com) مقرهم بره مصر. لما بياناتك تطلع من مصر، بنضمن إنها بتروح لدول فيها حماية كافية أو تحت ضمانات تعاقدية معادلة للقانون المصري.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">10</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Changes to this policy</h2>
+    <p>Material changes will be communicated by email to existing subscribers.</p></div>
+      <div class="section-ar"><h2>تعديلات على السياسة</h2>
+    <p>التغييرات الجوهرية بنبلّغ بيها المشتركين الحاليين بالإيميل.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-num">11</div>
+    <div class="section-grid">
+      <div class="section-en"><h2>Contact and complaints</h2>
+    <p>Privacy questions: <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a></p>
+    <p>If unsatisfied with our response, you can lodge a complaint with the Egyptian Data Protection Center.</p></div>
+      <div class="section-ar"><h2>التواصل والشكاوى</h2>
+    <p>أسئلة الخصوصية: <a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a></p>
+    <p>لو مش راضي عن ردنا، تقدر تقدّم شكوى لمركز حماية البيانات الشخصية المصري.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo-mark">
+          <span class="logo" style="color: var(--cream);">Bedaya</span>
+          <span class="logo-ar">بِدَايَة</span>
+        </a>
+        <p class="footer-tagline">Your business starts here.<br>شغلك يبدأ من هنا.</p>
+        <div class="footer-est">Est. MMXXVI · Cairo</div>
+      </div>
+      <div>
+        <h4>Bedaya</h4>
+        <ul>
+          <li><a href="/#modules">Modules</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@bedayakit.com">hello@bedayakit.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/terms.html">Terms</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/refund.html">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BEDAYA · بداية</span>
+      <span>Made in Cairo, for Egyptian founders.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

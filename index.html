@@ -1,0 +1,1887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Bedaya — AI-powered toolkits that help Egyptian entrepreneurs validate, build, and launch their businesses. AI does the heavy lifting. You stay the founder.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%230E4751'/%3E%3Ctext x='16' y='24' font-family='Georgia,serif' font-size='22' font-weight='900' fill='%23E66830' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<title>Bedaya · بداية — Your business starts here.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nile-dark: #0E4751;
+    --nile: #1A6573;
+    --nile-soft: #2E7B89;
+    --terra: #C8511C;
+    --terra-deep: #9C3D11;
+    --terra-bright: #E66830;
+    --sand: #C9A876;
+    --sand-light: #E8D7B5;
+    --cream: #FBF8F0;
+    --cream-warm: #F5EBD6;
+    --ink: #1A1A1A;
+    --ink-soft: #3A3530;
+    --mid: #7A746B;
+    --gold: #C9A14A;
+    --gold-bright: #F0C040;
+    --highlighter: #FFE8A8;
+    --font-display: 'Playfair Display', 'Times New Roman', serif;
+    --font-body: 'Crimson Pro', Georgia, serif;
+    --font-numeric: 'Bebas Neue', 'Arial Black', sans-serif;
+    --font-mono: 'Space Mono', 'Courier New', monospace;
+    --font-ar-display: 'Amiri', serif;
+    --font-ar-body: 'Tajawal', 'Arial', sans-serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  /* ═══════════════ ELEGANCE LAYER — subtle entrance & refined interactions ═══════════════ */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* Hero entrance — subtle stagger, fires once on load */
+  .hero-eyebrow { animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: 0.05s; }
+  .hero-title, .hero-title-ar { animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: 0.15s; }
+  .hero-subtitle, .hero-subtitle-ar { animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: 0.25s; }
+  .hero-ctas { animation: fadeUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) backwards; animation-delay: 0.35s; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ═══════════════ NAVIGATION ═══════════════ */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: var(--cream);
+    border-bottom: 2px solid var(--terra);
+    z-index: 100;
+    padding: 16px 0;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .logo {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--nile-dark);
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .logo-ar {
+    font-family: var(--font-ar-display);
+    font-weight: 700;
+    color: var(--terra);
+    font-size: 26px;
+    line-height: 1;
+  }
+  .logo-mark { display: flex; align-items: baseline; gap: 14px; text-decoration: none; }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--ink);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .nav-links a:hover { color: var(--terra); }
+  .btn-primary {
+    background: var(--terra);
+    color: var(--cream);
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: var(--terra-deep);
+    color: var(--cream);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(200, 81, 28, 0.25);
+  }
+
+  /* ═══════════════ HERO ═══════════════ */
+  .hero {
+    padding: 64px 0 80px;
+    position: relative;
+    background: var(--cream);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    background: var(--nile-dark);
+    color: var(--cream);
+    padding: 6px 14px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 0.98;
+    color: var(--nile-dark);
+    letter-spacing: -0.025em;
+    margin-bottom: 24px;
+  }
+  .hero-title .accent { color: var(--terra); }
+  .hero-title .highlight {
+    background: var(--highlighter);
+    padding: 0 6px;
+  }
+  .hero-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 56px;
+    color: var(--nile-dark);
+    line-height: 1.1;
+    font-weight: 700;
+    text-align: right;
+    direction: rtl;
+    margin-bottom: 24px;
+  }
+  .hero-title-ar .accent { color: var(--terra); }
+  .hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 32px;
+  }
+  .hero-subtitle-ar {
+    font-family: var(--font-ar-body);
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 32px;
+  }
+  .hero-ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+  .btn-secondary {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--nile-dark);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid var(--nile-dark);
+    padding-bottom: 2px;
+  }
+  .btn-secondary:hover { color: var(--terra); border-bottom-color: var(--terra); }
+
+  /* ═══════════════ PHILOSOPHY STRIP ═══════════════ */
+  .philosophy {
+    background: var(--nile-dark);
+    color: var(--cream);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .phil-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .phil-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 0.98;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .phil-title .accent { color: var(--terra-bright); }
+  .phil-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 48px;
+    color: var(--cream);
+    line-height: 1.1;
+    font-weight: 700;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 32px;
+  }
+  .phil-title-ar .accent { color: var(--terra-bright); }
+  .phil-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--terra-bright);
+    margin-bottom: 24px;
+  }
+  .phil-body {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--sand-light);
+    margin-bottom: 16px;
+  }
+  .phil-body em { color: var(--terra-bright); font-style: italic; font-weight: 600; }
+  .phil-body strong { color: var(--cream); }
+  .phil-body-ar {
+    font-family: var(--font-ar-body);
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--sand-light);
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+  .phil-body-ar em { color: var(--terra-bright); font-style: italic; font-weight: 700; }
+  .phil-body-ar strong { color: var(--cream); }
+
+  /* ═══════════════ HOW IT WORKS ═══════════════ */
+  .how {
+    background: var(--cream);
+    padding: 96px 0;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: end;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--terra);
+    margin-bottom: 56px;
+  }
+  .section-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    color: var(--terra);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--nile-dark);
+    letter-spacing: -0.02em;
+  }
+  .section-title .accent { color: var(--terra); }
+  .section-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 42px;
+    color: var(--terra);
+    direction: rtl;
+    text-align: right;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .how-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .how-card {
+    background: var(--cream-warm);
+    padding: 32px;
+    position: relative;
+    border-top: 5px solid var(--terra);
+  }
+  .how-card:nth-child(2) { border-top-color: var(--nile); }
+  .how-card:nth-child(3) { border-top-color: var(--gold); }
+  .how-num {
+    font-family: var(--font-numeric);
+    font-size: 72px;
+    color: var(--terra);
+    line-height: 0.8;
+    margin-bottom: 24px;
+  }
+  .how-card:nth-child(2) .how-num { color: var(--nile); }
+  .how-card:nth-child(3) .how-num { color: var(--gold); }
+  .how-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--nile-dark);
+    margin-bottom: 6px;
+    line-height: 1.15;
+  }
+  .how-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 22px;
+    color: var(--terra);
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .how-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .how-text-ar {
+    font-family: var(--font-ar-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* ═══════════════ MODULE 1 SPOTLIGHT ═══════════════ */
+  .spotlight {
+    background: var(--nile-dark);
+    color: var(--cream);
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .spotlight-mega-num {
+    font-family: var(--font-numeric);
+    font-size: 380px;
+    line-height: 0.75;
+    color: var(--terra);
+    letter-spacing: -0.05em;
+    position: absolute;
+    right: -40px;
+    bottom: -100px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .spotlight-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .spotlight-badge {
+    display: inline-block;
+    background: var(--terra-bright);
+    color: var(--cream);
+    padding: 6px 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .spotlight-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+  .spotlight-title .accent { color: var(--terra-bright); }
+  .spotlight-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 48px;
+    color: var(--cream);
+    direction: rtl;
+    text-align: right;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .spotlight-text {
+    font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--sand-light);
+    margin-bottom: 28px;
+  }
+  .spotlight-text-ar {
+    font-family: var(--font-ar-body);
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--sand-light);
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 28px;
+  }
+  .spotlight-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .spot-feat {
+    background: rgba(245, 235, 214, 0.08);
+    padding: 12px 14px;
+    border-left: 3px solid var(--terra-bright);
+  }
+  .spot-feat-num {
+    font-family: var(--font-numeric);
+    font-size: 22px;
+    color: var(--terra-bright);
+    line-height: 1;
+  }
+  .spot-feat-text {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--cream);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .btn-spotlight {
+    background: var(--terra-bright);
+    color: var(--cream);
+    padding: 14px 24px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  /* ═══════════════ MODULES GRID ═══════════════ */
+  .modules {
+    background: var(--cream);
+    padding: 96px 0;
+  }
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .mod-card {
+    background: var(--cream-warm);
+    padding: 24px;
+    position: relative;
+    border-top: 4px solid var(--terra);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    cursor: pointer;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    font-family: inherit;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease, border-top-color 0.45s ease;
+  }
+  .mod-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(14, 71, 81, 0.14);
+  }
+  .mod-card[data-module="01"] { border-top-color: var(--terra); }
+  .mod-card[data-module="02"] { border-top-color: var(--gold-bright); }
+  .mod-card[data-module="03"],
+  .mod-card[data-module="04"],
+  .mod-card[data-module="05"],
+  .mod-card[data-module="06"],
+  .mod-card[data-module="07"],
+  .mod-card[data-module="08"] {
+    border-top-color: var(--sand);
+  }
+  .mod-num {
+    font-family: var(--font-numeric);
+    font-size: 42px;
+    color: var(--terra);
+    line-height: 0.85;
+    margin-bottom: 10px;
+  }
+  .mod-card[data-module]:not([data-module="01"]):not([data-module="02"]) .mod-num { color: var(--mid); }
+  .mod-card[data-module="02"] .mod-num { color: var(--gold); }
+  .mod-status {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+  .mod-status.live {
+    background: var(--terra);
+    color: var(--cream);
+  }
+  .mod-status.progress {
+    background: var(--gold-bright);
+    color: var(--ink);
+  }
+  .mod-status.soon {
+    background: rgba(122, 116, 107, 0.18);
+    color: var(--mid);
+  }
+  .mod-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 17px;
+    color: var(--nile-dark);
+    line-height: 1.15;
+    margin-bottom: 4px;
+  }
+  .mod-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 17px;
+    color: var(--terra);
+    direction: rtl;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .mod-card[data-module]:not([data-module="01"]):not([data-module="02"]) .mod-title-ar { color: var(--mid); }
+  .mod-desc {
+    font-family: var(--font-body);
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-top: auto;
+  }
+
+  /* ═══════════════ MODULE MODAL ═══════════════ */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(14, 71, 81, 0.78);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 16px;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    transition: opacity 0.35s ease, visibility 0s linear 0.35s;
+  }
+  .modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 0.35s ease, visibility 0s linear 0s;
+  }
+  .modal-card {
+    background: var(--nile-dark);
+    color: var(--cream);
+    max-width: 1080px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    /* The split-open reveal: starts as horizontal slit at center, opens vertically */
+    clip-path: inset(50% 0 50% 0);
+    transition: clip-path 0.65s cubic-bezier(0.76, 0, 0.24, 1);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  }
+  .modal-overlay.active .modal-card {
+    clip-path: inset(0 0 0 0);
+  }
+  .modal-mega-num {
+    font-family: var(--font-numeric);
+    font-size: 360px;
+    line-height: 0.75;
+    color: var(--terra);
+    letter-spacing: -0.05em;
+    position: absolute;
+    right: -30px;
+    bottom: -90px;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border: 1.5px solid var(--terra-bright);
+    background: transparent;
+    color: var(--cream);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 5;
+    font-family: var(--font-mono);
+    transition: background 0.25s ease, transform 0.25s ease;
+  }
+  .modal-close:hover {
+    background: var(--terra-bright);
+    transform: rotate(90deg);
+  }
+  .modal-content {
+    position: relative;
+    z-index: 2;
+    padding: 56px 48px 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    /* Content fades in after the split reveal starts */
+    opacity: 0;
+    transition: opacity 0.4s ease 0.35s;
+  }
+  .modal-overlay.active .modal-content {
+    opacity: 1;
+  }
+  .modal-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .modal-badge.live { background: var(--terra-bright); color: var(--cream); }
+  .modal-badge.progress { background: var(--gold-bright); color: var(--ink); }
+  .modal-badge.soon { background: rgba(245, 235, 214, 0.15); color: var(--sand-light); }
+  .modal-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 0.95;
+    color: var(--cream);
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+  .modal-title .accent { color: var(--terra-bright); }
+  .modal-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 42px;
+    color: var(--cream);
+    direction: rtl;
+    text-align: right;
+    line-height: 1.05;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .modal-text {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--sand-light);
+    margin-bottom: 16px;
+  }
+  .modal-text strong { color: var(--terra-bright); }
+  .modal-text-ar {
+    font-family: var(--font-ar-body);
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--sand-light);
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 16px;
+  }
+  .modal-text-ar strong { color: var(--terra-bright); font-weight: 700; }
+  .modal-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 24px 0;
+  }
+  .modal-feat {
+    background: rgba(245, 235, 214, 0.08);
+    padding: 10px 12px;
+    border-left: 3px solid var(--terra-bright);
+  }
+  .modal-feat-num {
+    font-family: var(--font-numeric);
+    font-size: 20px;
+    color: var(--terra-bright);
+    line-height: 1;
+  }
+  .modal-feat-text {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    color: var(--cream);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 4px;
+  }
+  .modal-cta {
+    background: var(--terra-bright);
+    color: var(--cream);
+    padding: 14px 24px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 8px;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+  .modal-cta:hover {
+    background: var(--terra);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(230, 104, 48, 0.3);
+  }
+  .modal-cta.muted {
+    background: transparent;
+    color: var(--cream);
+    border: 1.5px solid var(--sand);
+  }
+  .modal-cta.muted:hover {
+    background: var(--sand);
+    color: var(--nile-dark);
+  }
+  .modal-meta {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--gold-bright);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 18px;
+  }
+  @media (max-width: 900px) {
+    .modal-content {
+      grid-template-columns: 1fr;
+      padding: 48px 24px 32px;
+      gap: 24px;
+    }
+    .modal-title { font-size: 36px; }
+    .modal-title-ar { font-size: 32px; }
+    .modal-mega-num { font-size: 220px; }
+  }
+
+  /* ═══════════════ FOR WHO ═══════════════ */
+  .forwho {
+    background: var(--cream-warm);
+    padding: 96px 0;
+  }
+  .forwho-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+  .forwho-body p { margin-bottom: 16px; font-size: 17px; line-height: 1.65; color: var(--ink-soft); }
+  .forwho-body strong { color: var(--terra); }
+  .forwho-body-ar { direction: rtl; text-align: right; }
+  .forwho-body-ar p { font-family: var(--font-ar-body); font-size: 17px; line-height: 1.8; margin-bottom: 16px; color: var(--ink-soft); }
+  .forwho-body-ar strong { color: var(--terra); font-weight: 700; }
+  .business-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+  .btype {
+    background: var(--cream);
+    padding: 8px 14px;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--nile-dark);
+    border: 1.5px solid var(--terra);
+  }
+
+  /* ═══════════════ PRICING ═══════════════ */
+  .pricing {
+    background: var(--cream);
+    padding: 96px 0;
+  }
+  .price-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .price-card {
+    background: var(--cream-warm);
+    padding: 32px 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid var(--sand);
+  }
+  .price-card.featured {
+    background: var(--nile-dark);
+    color: var(--cream);
+    border-top-color: var(--terra-bright);
+    transform: translateY(-12px);
+  }
+  .price-card.featured .price-name { color: var(--cream); }
+  .price-card.featured .price-desc { color: var(--sand-light); }
+  .price-card.featured .price-features li { color: var(--sand-light); border-color: rgba(245,235,214,0.15); }
+  .price-card.featured .price-features li::before { color: var(--terra-bright); }
+  .price-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--terra-bright);
+    color: var(--cream);
+    padding: 4px 12px;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .price-name {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--nile-dark);
+    margin-bottom: 4px;
+    line-height: 1.1;
+  }
+  .price-name-ar {
+    font-family: var(--font-ar-display);
+    font-size: 18px;
+    color: var(--terra);
+    direction: rtl;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .price-card.featured .price-name-ar { color: var(--terra-bright); }
+  .price-amount {
+    font-family: var(--font-numeric);
+    font-size: 56px;
+    line-height: 0.9;
+    color: var(--terra);
+    margin-bottom: 4px;
+  }
+  .price-card.featured .price-amount { color: var(--terra-bright); }
+  .price-currency {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--mid);
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  .price-card.featured .price-currency { color: var(--sand-light); }
+  .price-desc {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    min-height: 40px;
+  }
+  .price-features {
+    list-style: none;
+    margin-bottom: 24px;
+    flex: 1;
+  }
+  .price-features li {
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    padding: 8px 0 8px 22px;
+    position: relative;
+    border-top: 1px solid rgba(200, 81, 28, 0.15);
+  }
+  .price-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--terra);
+    font-weight: 700;
+  }
+  .price-features li:first-child { border-top: none; }
+  .price-cta {
+    background: var(--terra);
+    color: var(--cream);
+    padding: 12px 0;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+  .price-cta:hover {
+    background: var(--terra-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(200, 81, 28, 0.2);
+  }
+  .price-card.featured .price-cta { background: var(--terra-bright); }
+  .price-card.featured .price-cta:hover { background: var(--terra); }
+
+  /* ═══════════════ FAQ ═══════════════ */
+  .faq {
+    background: var(--cream);
+    padding: 96px 0;
+  }
+  .faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .faq-item {
+    padding: 24px 0;
+    border-bottom: 1.5px dashed rgba(200, 81, 28, 0.3);
+  }
+  .faq-q {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 19px;
+    color: var(--nile-dark);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .faq-q-ar {
+    font-family: var(--font-ar-display);
+    font-size: 18px;
+    color: var(--terra);
+    direction: rtl;
+    text-align: right;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+  .faq-a-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .faq-a {
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+  .faq-a-ar {
+    font-family: var(--font-ar-body);
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    direction: rtl;
+    text-align: right;
+  }
+
+  /* ═══════════════ SUBSCRIBE BAND ═══════════════ */
+  .subscribe-band {
+    background: var(--cream-warm);
+    padding: 64px 0;
+    border-top: 1px solid var(--sand);
+    border-bottom: 1px solid var(--sand);
+  }
+  .sub-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .sub-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--terra);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  .sub-eyebrow-ar {
+    font-family: var(--font-ar-display);
+    font-size: 14px;
+    color: var(--terra);
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-align: right;
+    direction: rtl;
+  }
+  .sub-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 1.15;
+    color: var(--nile-dark);
+    letter-spacing: -0.015em;
+    margin-bottom: 6px;
+  }
+  .sub-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 26px;
+    color: var(--nile-dark);
+    line-height: 1.2;
+    font-weight: 700;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 6px;
+  }
+  .sub-text {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .sub-text-ar {
+    font-family: var(--font-ar-body);
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    direction: rtl;
+    text-align: right;
+  }
+  .sub-cta-wrap { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+  .sub-cta {
+    background: var(--nile-dark);
+    color: var(--cream);
+    padding: 14px 28px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+  .sub-cta:hover {
+    background: var(--terra);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(14, 71, 81, 0.18);
+  }
+  .sub-note {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: var(--mid);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  @media (max-width: 900px) {
+    .sub-grid { grid-template-columns: 1fr; gap: 24px; }
+  }
+
+  /* ═══════════════ FINAL CTA ═══════════════ */
+  .final-cta {
+    background: var(--terra);
+    color: var(--cream);
+    padding: 96px 0;
+    text-align: center;
+  }
+  .final-cta-title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 1;
+    color: var(--cream);
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  .final-cta-title-ar {
+    font-family: var(--font-ar-display);
+    font-size: 44px;
+    color: var(--cream);
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .final-cta-sub {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 19px;
+    color: var(--sand-light);
+    margin-bottom: 32px;
+  }
+  .final-cta .btn {
+    background: var(--cream);
+    color: var(--terra);
+    padding: 16px 32px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  /* ═══════════════ FOOTER ═══════════════ */
+  .footer {
+    background: var(--nile-dark);
+    color: var(--sand-light);
+    padding: 48px 0 24px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 32px;
+  }
+  .footer h4 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--terra-bright);
+    margin-bottom: 16px;
+    font-weight: 700;
+  }
+  .footer ul { list-style: none; }
+  .footer ul li { margin-bottom: 8px; }
+  .footer a {
+    font-family: var(--font-body);
+    color: var(--sand-light);
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .footer a:hover { color: var(--terra-bright); }
+  .footer-brand .logo { color: var(--cream); }
+  .footer-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 16px;
+    color: var(--sand);
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+  .footer-est {
+    font-family: var(--font-mono);
+    font-size: 9px;
+    letter-spacing: 0.35em;
+    color: var(--terra-bright);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .footer-est::before, .footer-est::after {
+    content: '';
+    flex: 0 0 14px;
+    height: 1px;
+    background: var(--terra-bright);
+    opacity: 0.5;
+  }
+  .footer-est::after { flex: 1; }
+  .footer-bottom {
+    border-top: 1px solid rgba(245, 235, 214, 0.15);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    color: var(--mid);
+    text-transform: uppercase;
+  }
+
+  /* ═══════════════ RESPONSIVE ═══════════════ */
+  @media (max-width: 900px) {
+    .hero-grid, .philosophy-grid, .section-header, .spotlight-content,
+    .forwho-content, .faq-a-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .how-grid, .modules-grid, .price-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-title, .phil-title, .section-title, .spotlight-title, .final-cta-title {
+      font-size: 40px;
+    }
+    .hero-title-ar, .phil-title-ar, .spotlight-title-ar, .final-cta-title-ar {
+      font-size: 36px;
+    }
+    .nav-links { gap: 16px; }
+    .nav-links a:not(.btn-primary) { display: none; }
+    .price-card.featured { transform: none; }
+    .spotlight-mega-num { font-size: 240px; }
+  }
+  @media (max-width: 560px) {
+    .container, .nav-inner { padding: 0 20px; }
+    .how-grid, .modules-grid, .price-grid {
+      grid-template-columns: 1fr;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+    .hero-title, .phil-title, .section-title { font-size: 32px; }
+    .hero-title-ar, .phil-title-ar { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ NAVIGATION ════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="logo-mark">
+      <span class="logo">Bedaya</span>
+      <span class="logo-ar">بِدَايَة</span>
+    </a>
+    <div class="nav-links">
+      <a href="#modules">Modules</a>
+      <a href="#how">How it works</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing" class="btn-primary">Get started</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-eyebrow">AI Toolkits for Egyptian Founders</div>
+        <h1 class="hero-title">
+          Your business <span class="accent">starts</span> here.
+        </h1>
+        <p class="hero-subtitle">
+          Bedaya gives you the <span style="background: var(--highlighter); padding: 0 4px;">AI-powered toolkits</span> to validate, brand, launch, and grow your business in Egypt. Designed for the founder you're about to become.
+        </p>
+        <div class="hero-ctas">
+          <a href="#pricing" class="btn-primary">Get Module 01</a>
+          <a href="#how" class="btn-secondary">See how it works</a>
+        </div>
+      </div>
+      <div>
+        <div class="hero-eyebrow" style="background: var(--terra);">كيتس ذكاء اصطناعي لرواد الأعمال المصريين</div>
+        <h1 class="hero-title-ar">
+          شغلك <span class="accent">يبدأ</span> من هنا.
+        </h1>
+        <p class="hero-subtitle-ar">
+          بداية بتديك <span style="background: var(--highlighter); padding: 0 4px;">كيتس مدعومة بالذكاء الاصطناعي</span> عشان تتحقق من فكرتك، تبنيها، تطلقها، وتكبّرها في مصر. مصممة للمؤسس اللي هتبقاه.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ PHILOSOPHY ════════════ -->
+<section class="philosophy">
+  <div class="container">
+    <div class="philosophy-grid">
+      <div>
+        <div class="phil-eyebrow">→ Our promise · وعدنا</div>
+        <h2 class="phil-title">AI helps.<br>You <span class="accent">decide</span>.</h2>
+        <div class="phil-divider"></div>
+        <p class="phil-body">AI is the most powerful productivity tool ever built for entrepreneurs. It generates customer personas, sizes markets, drafts pitches, writes code, designs logos — <strong>work that used to take months and cost tens of thousands.</strong></p>
+        <p class="phil-body"><em>But AI cannot build your business.</em></p>
+        <p class="phil-body">It cannot decide which idea to pursue. It cannot risk your savings. It cannot care about your outcome. <strong>You will.</strong></p>
+        <p class="phil-body">That's why you — not the AI — are the founder. The decisions, the creative leadership, the courage to ship something imperfect: those are yours. Our toolkits multiply your judgment, not replace it.</p>
+      </div>
+      <div>
+        <h2 class="phil-title-ar">الذكاء الاصطناعي بيساعد.<br>أنت اللي <span class="accent">بتقرر</span>.</h2>
+        <div class="phil-divider"></div>
+        <p class="phil-body-ar">الذكاء الاصطناعي أقوى أداة إنتاجية اتعرفت لرواد الأعمال. بيطلع بروفايلات عملاء، بيحسب أسواق، بيكتب pitches، بيكتب كود، بيصمم شعارات — <strong>شغل كان بياخد شهور ويكلف عشرات الآلاف.</strong></p>
+        <p class="phil-body-ar"><em>بس الذكاء الاصطناعي ما يقدرش يبني شغلك.</em></p>
+        <p class="phil-body-ar">ما يقدرش يقرر أي فكرة تختار. ما يقدرش يخاطر بفلوسك. ما يقدرش يهتم بنتيجتك. <strong>أنت اللي هتهتم.</strong></p>
+        <p class="phil-body-ar">عشان كده أنت — مش الذكاء الاصطناعي — اللي مؤسس الشغل. القرارات، القيادة الإبداعية، الشجاعة إنك تطرح حاجة مش كاملة: كلها ليك. كيتساتنا بتضاعف حكمك، مش بتبدّله.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ HOW IT WORKS ════════════ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">How it works · إزاي بتشتغل</div>
+        <h2 class="section-title">Three steps. <span class="accent">No fluff.</span></h2>
+      </div>
+      <h2 class="section-title-ar">ثلاث خطوات. مفيش حشو.</h2>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <h3 class="how-title">Get the toolkit.</h3>
+        <h3 class="how-title-ar">اشتري الكيت</h3>
+        <p class="how-text">Pay once. Download instantly. The toolkit is yours forever — bilingual PDF, prompt library, calculators, templates.</p>
+        <p class="how-text-ar">ادفع مرة، حمّل على طول. الكيت بتاعك للأبد — PDF ثنائي اللغة، مكتبة برومبتات، حاسبات، قوالب.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <h3 class="how-title">Run the prompts.</h3>
+        <h3 class="how-title-ar">شغّل البرومبتات</h3>
+        <p class="how-text">Open ChatGPT or Claude. Copy each prompt, fill in your context, paste, read the answer critically. AI does the heavy lifting.</p>
+        <p class="how-text-ar">افتح ChatGPT أو Claude. انسخ كل برومبت، املا السياق بتاعك، الصق، اقرا الإجابة بشكل ناقد. الذكاء الاصطناعي بيشيل العبء.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <h3 class="how-title">You decide.</h3>
+        <h3 class="how-title-ar">أنت بتقرر</h3>
+        <p class="how-text">Apply your judgment. Override the AI when needed. Take the risk. By the end, you have a validated business — not just notes.</p>
+        <p class="how-text-ar">طبّق حكمك. خالف الذكاء الاصطناعي لما تحتاج. خد المخاطرة. في الآخر، عندك شغل متحقق منه — مش مجرد ملاحظات.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ MODULES GRID ════════════ -->
+<section class="modules" id="modules">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">The Bedaya Library · مكتبة بداية</div>
+        <h2 class="section-title">Eight modules. <span class="accent">One journey.</span></h2>
+      </div>
+      <h2 class="section-title-ar">٨ موديولز. رحلة واحدة.</h2>
+    </div>
+
+    <div class="modules-grid">
+      <button class="mod-card" data-module="01" onclick="openModule('01')">
+        <div class="mod-num">01</div>
+        <h3 class="mod-title">Validation Kit</h3>
+        <span class="mod-status live">Live · متاحة</span>
+        <h3 class="mod-title-ar">كيت التحقق</h3>
+        <p class="mod-desc">From idea to validated business in 7 days.</p>
+      </button>
+      <button class="mod-card" data-module="02" onclick="openModule('02')">
+        <div class="mod-num">02</div>
+        <h3 class="mod-title">Branding Kit</h3>
+        <span class="mod-status progress">In progress · جارٍ التطوير</span>
+        <h3 class="mod-title-ar">كيت البراند</h3>
+        <p class="mod-desc">From validated idea to brand that customers remember.</p>
+      </button>
+      <button class="mod-card" data-module="03" onclick="openModule('03')">
+        <div class="mod-num">03</div>
+        <h3 class="mod-title">Marketing Launch</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت التسويق</h3>
+        <p class="mod-desc">From brand to your first 100 paying customers.</p>
+      </button>
+      <button class="mod-card" data-module="04" onclick="openModule('04')">
+        <div class="mod-num">04</div>
+        <h3 class="mod-title">Sales Kit</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت المبيعات</h3>
+        <p class="mod-desc">From first customers to predictable revenue.</p>
+      </button>
+      <button class="mod-card" data-module="05" onclick="openModule('05')">
+        <div class="mod-num">05</div>
+        <h3 class="mod-title">Operations Kit</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت العمليات</h3>
+        <p class="mod-desc">Build the systems that let your business run without you.</p>
+      </button>
+      <button class="mod-card" data-module="06" onclick="openModule('06')">
+        <div class="mod-num">06</div>
+        <h3 class="mod-title">Finance Kit</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت المالية</h3>
+        <p class="mod-desc">Profitability, cash flow, and the math founders avoid.</p>
+      </button>
+      <button class="mod-card" data-module="07" onclick="openModule('07')">
+        <div class="mod-num">07</div>
+        <h3 class="mod-title">Growth Kit</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت النمو</h3>
+        <p class="mod-desc">From profitable business to scaled business.</p>
+      </button>
+      <button class="mod-card" data-module="08" onclick="openModule('08')">
+        <div class="mod-num">08</div>
+        <h3 class="mod-title">Team Kit</h3>
+        <span class="mod-status soon">Coming soon · قريباً</span>
+        <h3 class="mod-title-ar">كيت الفريق</h3>
+        <p class="mod-desc">Your first 10 hires. Without losing the soul.</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FOR WHO ════════════ -->
+<section class="forwho">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Who Bedaya is for · بداية لمين</div>
+        <h2 class="section-title">Any founder. <span class="accent">Any business.</span></h2>
+      </div>
+      <h2 class="section-title-ar">أي مؤسس. أي شغل.</h2>
+    </div>
+
+    <div class="forwho-content">
+      <div class="forwho-body">
+        <p>Bedaya doesn't care what kind of business you're building. The frameworks work for <strong>SaaS, services, physical products, courses, agencies, restaurants, e-commerce</strong> — anything you can validate, brand, launch, and grow.</p>
+        <p>What matters is that you're serious. You're tired of consuming content and ready to build. You want to use AI as a multiplier, not a crutch. You'll take responsibility for the decisions and the outcomes.</p>
+        <p>If that's you, every toolkit will pay for itself many times over in the months and years it saves you.</p>
+        <div class="business-types">
+          <span class="btype">SaaS</span>
+          <span class="btype">Services</span>
+          <span class="btype">Physical Products</span>
+          <span class="btype">Courses</span>
+          <span class="btype">Agencies</span>
+          <span class="btype">F&B</span>
+          <span class="btype">E-commerce</span>
+          <span class="btype">B2B</span>
+        </div>
+      </div>
+      <div class="forwho-body-ar">
+        <p>بداية مش فارق معاها بتبني أي نوع شغل. الإطارات بتاعتنا شغّالة لـ<strong>SaaS، خدمات، منتجات مادية، كورسات، وكالات، مطاعم، إي-كوميرس</strong> — أي حاجة تقدر تتحقق منها، تبنيلها براند، تطلقها، وتكبّرها.</p>
+        <p>اللي بيهم إنك جاد. تعبت من استهلاك المحتوى وعاوز تبني. عاوز تستخدم الذكاء الاصطناعي كمضاعِف، مش كعكاز. هتاخد مسؤولية القرارات والنتايج.</p>
+        <p>لو ده أنت، كل كيت هيوفّر لك أضعاف ثمنه في الشهور والسنين اللي بيوفّرهالك.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ PRICING ════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Pricing · الأسعار</div>
+        <h2 class="section-title">Start where you <span class="accent">are.</span></h2>
+      </div>
+      <h2 class="section-title-ar">ابدأ من حيث أنت</h2>
+    </div>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <h3 class="price-name">Single Module</h3>
+        <h3 class="price-name-ar">موديول واحد</h3>
+        <div class="price-amount">199</div>
+        <div class="price-currency">EGP · جنيه</div>
+        <p class="price-desc">Try one toolkit. See if Bedaya is for you.</p>
+        <ul class="price-features">
+          <li>Any single module</li>
+          <li>Bilingual PDF + tools</li>
+          <li>Lifetime access</li>
+          <li>Updates included</li>
+          <li>7-day conditional refund*</li>
+        </ul>
+        <a href="#" class="price-cta">Get Started</a>
+      </div>
+      <div class="price-card">
+        <h3 class="price-name">Starter Bundle</h3>
+        <h3 class="price-name-ar">حزمة المبتدئ</h3>
+        <div class="price-amount">499</div>
+        <div class="price-currency">EGP · جنيه</div>
+        <p class="price-desc">The foundation: validate, brand, launch.</p>
+        <ul class="price-features">
+          <li>Modules 01 · 02 · 03</li>
+          <li>All toolkits + bonuses</li>
+          <li>Lifetime access</li>
+          <li>Updates included</li>
+          <li>7-day conditional refund*</li>
+        </ul>
+        <a href="#" class="price-cta">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <span class="price-badge">Most popular</span>
+        <h3 class="price-name">Complete Library</h3>
+        <h3 class="price-name-ar">المكتبة الكاملة</h3>
+        <div class="price-amount">999</div>
+        <div class="price-currency">EGP · جنيه</div>
+        <p class="price-desc">All 8 modules. The full founder journey.</p>
+        <ul class="price-features">
+          <li>All 8 modules as they launch</li>
+          <li>Every toolkit · every tool</li>
+          <li>Lifetime access</li>
+          <li>Priority email support</li>
+          <li>7-day conditional refund*</li>
+        </ul>
+        <a href="#" class="price-cta">Get Started</a>
+      </div>
+      <div class="price-card">
+        <h3 class="price-name">Founder's Edition</h3>
+        <h3 class="price-name-ar">نسخة المؤسس</h3>
+        <div class="price-amount">1,499</div>
+        <div class="price-currency">EGP · جنيه</div>
+        <p class="price-desc">Complete library + founder perks.</p>
+        <ul class="price-features">
+          <li>Everything in Complete</li>
+          <li>Early access to new modules</li>
+          <li>Founder community access</li>
+          <li>Direct founder email line</li>
+          <li>7-day conditional refund*</li>
+        </ul>
+        <a href="#" class="price-cta">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FAQ ════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Questions · الأسئلة</div>
+        <h2 class="section-title">The short <span class="accent">answers.</span></h2>
+      </div>
+      <h2 class="section-title-ar">الإجابات المختصرة</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3 class="faq-q">Do I need to know how to use AI already?</h3>
+        <h3 class="faq-q-ar">لازم أعرف أستخدم الذكاء الاصطناعي قبل كده؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">No. Every toolkit teaches you which prompts to run, in what order, with what context. If you can copy and paste, you can use Bedaya. We provide the prompts; you bring the judgment.</p>
+          <p class="faq-a-ar">لأ. كل كيت بيعلّمك أي برومبتات تشغّل، بأي ترتيب، وبأي سياق. لو تعرف تعمل copy و paste، تقدر تستخدم بداية. إحنا بنوفّر البرومبتات، أنت بتجيب الحكم.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Will Bedaya build my business for me?</h3>
+        <h3 class="faq-q-ar">بداية هتبنيلي شغلي؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">No — and any product that promises that is lying to you. AI does the heavy lifting: research, analysis, drafts. <strong>You decide</strong> what to pursue, what to risk, and how to ship. That's not a bug — that's the only honest way it works.</p>
+          <p class="faq-a-ar">لأ — وأي منتج بيوعدك بكده بيكدب عليك. الذكاء الاصطناعي بيشيل العبء: بحث، تحليل، مسودّات. <strong>أنت بتقرر</strong> إيه اللي تكمل فيه، إيه اللي تخاطر بيه، إزاي تطلقه. ده مش عيب — ده الطريقة الوحيدة الصادقة للشغل.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Does it work for my type of business?</h3>
+        <h3 class="faq-q-ar">شغّال لنوع شغلي؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">Yes. The frameworks are designed to work across SaaS, services, physical products, courses, agencies, restaurants, B2B, e-commerce — anywhere you need to validate a real customer, a real problem, and real economics. Specific examples in the kits cover multiple business types.</p>
+          <p class="faq-a-ar">أيوه. الإطارات مصممة تشتغل في SaaS، خدمات، منتجات مادية، كورسات، وكالات، مطاعم، B2B، إي-كوميرس — أي حتة محتاج تتحقق من عميل حقيقي، مشكلة حقيقية، واقتصاديات حقيقية. الأمثلة في الكيتس بتغطّي أنواع شغل مختلفة.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What's the language? Arabic or English?</h3>
+        <h3 class="faq-q-ar">اللغة عربي ولا إنجليزي؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">Both. Every kit is fully bilingual — English and Egyptian Arabic side-by-side on every page. Use whichever feels more natural for each section. The prompts themselves are provided in both languages so you can copy directly into ChatGPT or Claude.</p>
+          <p class="faq-a-ar">الاتنين. كل كيت ثنائي اللغة بالكامل — إنجليزي وعربي مصري جنب بعض في كل صفحة. استخدم اللي مناسبك في كل قسم. البرومبتات نفسها متوفرة بالاتنين عشان تنسخ مباشرة في ChatGPT أو Claude.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">What if I'm not happy?</h3>
+        <h3 class="faq-q-ar">لو مش راضي؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">7-day conditional refund. If you've downloaded fewer than 3 files from your kit and feel it's not what you expected, reply to your delivery email saying <em>"refund please"</em> — we refund the full amount within 5 business days. Once you've downloaded 3 or more files, the kit has been substantively consumed and refunds no longer apply. Fair to you, fair to us.</p>
+          <p class="faq-a-ar">استرجاع مشروط لمدة ٧ أيام. لو حملت أقل من ٣ ملفات من الكيت وحسيت إنه مش اللي توقعته، رد على إيميل التسليم بكلمة <em>"refund please"</em> — هنرجعلك المبلغ كامل خلال ٥ أيام عمل. لو حملت ٣ ملفات أو أكتر، يبقى استهلكت الكيت فعلياً والاسترجاع مش هينفع. عادل ليك وعادل لينا.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Are updates included?</h3>
+        <h3 class="faq-q-ar">التحديثات مشمولة؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">Yes. When we update a kit — new prompts, refined frameworks, current market data — you get the new version free. If you bought the Complete Library, you get every future module as it launches at no extra cost.</p>
+          <p class="faq-a-ar">أيوه. لما بنحدّث كيت — برومبتات جديدة، إطارات منقّحة، بيانات سوق محدّثة — بتاخد النسخة الجديدة مجاناً. لو اشتريت المكتبة الكاملة، بتاخد كل موديول جديد لما يطلق من غير تكلفة إضافية.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <h3 class="faq-q">Who's behind Bedaya?</h3>
+        <h3 class="faq-q-ar">مين ورا بداية؟</h3>
+        <div class="faq-a-grid">
+          <p class="faq-a">An Egyptian founder who got tired of seeing brilliant local talent waste years on ideas the market would have rejected in a week. Bedaya is the toolkit I wished existed when I started — built specifically for the Egyptian market, with the tools and AI that exist today.</p>
+          <p class="faq-a-ar">مؤسس مصري تعب من إنه يشوف موهبة محلية رائعة بتضيّع سنين على أفكار السوق كان هيرفضها في أسبوع. بداية هي الكيت اللي تمنّيت يكون موجود لما بدأت — مبنية مخصوص للسوق المصري، بالأدوات والذكاء الاصطناعي اللي موجود النهارده.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ SUBSCRIBE BAND ════════════ -->
+<section class="subscribe-band">
+  <div class="container">
+    <div class="sub-grid">
+      <div>
+        <div class="sub-eyebrow">→ Stay in the loop</div>
+        <h2 class="sub-title">Not ready yet? Get the launches.</h2>
+        <p class="sub-text">A short email when each new module ships. No marketing, no spam, no daily content.</p>
+        <div style="height: 16px;"></div>
+        <div class="sub-eyebrow-ar">تابع الإطلاقات ←</div>
+        <h2 class="sub-title-ar">لسه مش جاهز؟ تابع الإطلاقات.</h2>
+        <p class="sub-text-ar">إيميل قصير لما كل موديول جديد ينزل. مفيش تسويق، مفيش spam، مفيش محتوى يومي.</p>
+      </div>
+      <div class="sub-cta-wrap">
+        <a href="https://bedaya.kit.com/792c3e032d" class="sub-cta" target="_blank" rel="noopener">Notify me · سجّلني</a>
+        <span class="sub-note">No spam · مفيش spam</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FINAL CTA ════════════ -->
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-cta-title">This is the beginning.</h2>
+    <h2 class="final-cta-title-ar">ده البداية.</h2>
+    <p class="final-cta-sub">Stop reading. Start validating. Module 01 is waiting.</p>
+    <a href="#pricing" class="btn">Get Module 01 → 199 EGP</a>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-mark">
+          <span class="logo" style="color: var(--cream);">Bedaya</span>
+          <span class="logo-ar">بِدَايَة</span>
+        </a>
+        <p class="footer-tagline">Your business starts here.<br>شغلك يبدأ من هنا.</p>
+        <div class="footer-est">Est. MMXXVI · Cairo</div>
+      </div>
+      <div>
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="#modules">Validation</a></li>
+          <li><a href="#modules">Branding</a></li>
+          <li><a href="#modules">Marketing</a></li>
+          <li><a href="#modules">+ 5 more</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Bedaya</h4>
+        <ul>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="mailto:hello@bedayakit.com">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="refund.html">Refunds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BEDAYA · بداية</span>
+      <span>Made in Cairo, for Egyptian founders.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════ MODULE MODAL ════════════ -->
+<div class="modal-overlay" id="moduleModal" onclick="if(event.target===this)closeModule()">
+  <div class="modal-card">
+    <div class="modal-mega-num" id="modalMegaNum">01</div>
+    <button class="modal-close" onclick="closeModule()" aria-label="Close">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+const MODULES = {
+  '01': {
+    status: 'live',
+    statusLabelEn: '→ Available now',
+    statusLabelAr: 'متاحة الآن ←',
+    titleEn: 'The Validation <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">التحقق.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to validate your business idea before you spend a single pound building it. Includes <strong>30 investigative prompts</strong>, a pricing calculator, and the Bedaya Scorecard — the framework that tells you to GO, PIVOT, or KILL.</p><p class="modal-text">Works for any business type. SaaS. Service. Physical product. Course. Agency. Restaurant.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تتأكد من فكرة شغلك قبل ما تصرف عليها جنيه واحد. فيه <strong>٣٠ برومبت استقصائي</strong>، حاسبة تسعير، وشيت تقييم بداية — الإطار اللي بيقولك امشي، عدّل، أو اقتل.</p><p class="modal-text-ar">شغّالة لأي نوع شغل. SaaS، خدمة، منتج مادي، كورس، وكالة، مطعم.</p>',
+    features: [['7','Days'],['30','Prompts'],['57','Pages'],['∞','Yours forever']],
+    cta: { text: 'Get Module 01 → 199 EGP', link: '#pricing', muted: false },
+    metaEn: '',
+    metaAr: ''
+  },
+  '02': {
+    status: 'progress',
+    statusLabelEn: '⚒ In progress',
+    statusLabelAr: 'جارٍ التطوير ⚒',
+    titleEn: 'The Branding <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">البراند.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to build your brand identity from scratch using AI. Generate brand name candidates, logo concepts, color palettes, voice & tone guidelines, and a brand bible — all anchored in the validated customer you defined in Module 01.</p><p class="modal-text">For founders who want a brand that customers actually remember — not a generic logo and three colors picked in an afternoon.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تبني هوية البراند من الصفر بالذكاء الاصطناعي. هتطلّع أسماء براند مرشحة، أفكار شعارات، باليتات ألوان، إرشادات الصوت واللهجة، وكتاب براند — كلها مربوطة بالعميل المتحقق منه في الموديول الأول.</p><p class="modal-text-ar">للمؤسسين اللي عاوزين براند العملاء يفتكروه فعلاً — مش شعار عمومي وتلات ألوان متختارين في عصاريّة.</p>',
+    features: [['7','Days'],['25+','Prompts'],['Q2','2026 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q2 2026',
+    metaAr: 'الإطلاق المتوقع · الربع الثاني ٢٠٢٦'
+  },
+  '03': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Marketing <span class="accent">Launch Kit.</span>',
+    titleAr: 'كيت <span class="accent">التسويق.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to plan, execute, and measure your launch in the Egyptian market. Channel strategy, ad copy generation, organic content calendar, influencer outreach scripts, and conversion tracking — all built on your validated customer and branded identity.</p><p class="modal-text">Goal: your first 100 paying customers, with the data to prove what worked and what didn\'t.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تخطط، تنفّذ، وتقيس إطلاقك في السوق المصري. استراتيجية القنوات، توليد إعلانات، تقويم محتوى عضوي، scripts للتواصل مع المؤثرين، وقياس التحويلات — كله مبني على عميلك المتحقق وهويتك.</p><p class="modal-text-ar">الهدف: أول ١٠٠ عميل دافع، بالداتا اللي بتثبت إيه اشتغل وإيه لأ.</p>',
+    features: [['7','Days'],['Ads','Templates'],['Q2','2026 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q2 2026',
+    metaAr: 'الإطلاق المتوقع · الربع الثاني ٢٠٢٦'
+  },
+  '04': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Sales <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">المبيعات.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to systematize your sales process. Lead qualification frameworks, conversation scripts, objection handling playbooks, follow-up sequences, and pipeline analytics. Designed for solo founders selling their first 100 deals.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تأنظم عملية المبيعات. إطارات تأهيل العملاء المحتملين، scripts للمحادثات، playbooks للاعتراضات، سلاسل المتابعة، وتحليلات الـ pipeline. مصممة للمؤسسين اللي بيبيعوا أول ١٠٠ صفقة بنفسهم.</p>',
+    features: [['7','Days'],['Sales','Scripts'],['Q3','2026 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q3 2026',
+    metaAr: 'الإطلاق المتوقع · الربع الثالث ٢٠٢٦'
+  },
+  '05': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Operations <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">العمليات.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to build the operational backbone of your business. Make.com automation templates, SOP documentation, customer service flows, and the delegation playbook that lets your business run without you in the room.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تبني العمود الفقري لعمليات شغلك. قوالب أتمتة Make.com، توثيق إجراءات التشغيل، تدفقات خدمة العملاء، و playbook التفويض اللي يخلي شغلك يشتغل من غيرك في الأوضة.</p>',
+    features: [['7','Days'],['SOP','Templates'],['Q3','2026 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q3 2026',
+    metaAr: 'الإطلاق المتوقع · الربع الثالث ٢٠٢٦'
+  },
+  '06': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Finance <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">المالية.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to take real control of your numbers. Unit economics, cash flow modeling, pricing optimization, Egyptian tax obligations (VAT, income tax, e-invoicing), and the financial KPIs that actually matter for a small business in Egypt today.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تتحكم في الأرقام فعلاً. اقتصاديات الوحدة، نمذجة التدفق النقدي، تحسين التسعير، الالتزامات الضريبية المصرية (الضريبة المضافة، ضريبة الدخل، الفاتورة الإلكترونية)، والمؤشرات المالية اللي بتفرق فعلاً لشغل صغير في مصر دلوقتي.</p>',
+    features: [['7','Days'],['Tax','Templates'],['Q4','2026 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q4 2026',
+    metaAr: 'الإطلاق المتوقع · الربع الرابع ٢٠٢٦'
+  },
+  '07': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Growth <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">النمو.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system to identify your real growth levers and execute on the right ones. Retention analysis, channel expansion, referral system design, partnership outreach — all the moves that turn a profitable business into a scaled one.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام عشان تحدد روافع النمو الحقيقية وتنفّذ اللي بيستاهل. تحليل الاحتفاظ، توسيع القنوات، تصميم نظام الإحالة، التواصل للشراكات — الحركات اللي بتحوّل الشغل المربح لشغل متوسّع.</p>',
+    features: [['7','Days'],['Growth','Loops'],['Q1','2027 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q1 2027',
+    metaAr: 'الإطلاق المتوقع · الربع الأول ٢٠٢٧'
+  },
+  '08': {
+    status: 'soon',
+    statusLabelEn: '○ Coming soon',
+    statusLabelAr: 'قريباً ○',
+    titleEn: 'The Team <span class="accent">Kit.</span>',
+    titleAr: 'كيت <span class="accent">الفريق.</span>',
+    bodyEn: '<p class="modal-text">A 7-day system for your first 10 hires. Role design, sourcing scripts, structured interviews, onboarding flows, equity frameworks, performance reviews — built specifically for small Egyptian teams scaling from solo to ten.</p>',
+    bodyAr: '<p class="modal-text-ar">نظام ٧ أيام لأول ١٠ توظيفات. تصميم الأدوار، scripts المصادر، المقابلات المنظمة، تدفقات التأهيل، أُطر الأسهم، تقييمات الأداء — مبنية مخصوص للفرق المصرية الصغيرة وهي بتكبر من واحد لعشرة.</p>',
+    features: [['7','Days'],['HR','Templates'],['Q2','2027 launch'],['∞','Yours forever']],
+    cta: { text: 'Notify me at launch', link: 'https://bedaya.kit.com/792c3e032d', muted: true },
+    metaEn: 'Estimated launch · Q2 2027',
+    metaAr: 'الإطلاق المتوقع · الربع الثاني ٢٠٢٧'
+  }
+};
+
+function openModule(id) {
+  const m = MODULES[id];
+  if (!m) return;
+  document.getElementById('modalMegaNum').textContent = id;
+  const featHtml = m.features.map(f => `<div class="modal-feat"><div class="modal-feat-num">${f[0]}</div><div class="modal-feat-text">${f[1]}</div></div>`).join('');
+  const metaEnHtml = m.metaEn ? `<div class="modal-meta">${m.metaEn}</div>` : '';
+  const metaArHtml = m.metaAr ? `<div class="modal-meta">${m.metaAr}</div>` : '';
+  document.getElementById('modalContent').innerHTML = `
+    <div>
+      <div class="modal-badge ${m.status}">${m.statusLabelEn}</div>
+      <h2 class="modal-title">${m.titleEn}</h2>
+      ${m.bodyEn}
+      <div class="modal-features">${featHtml}</div>
+      <a href="${m.cta.link}" class="modal-cta${m.cta.muted ? ' muted' : ''}" ${m.cta.muted ? 'target="_blank" rel="noopener"' : ''} onclick="closeModule()">${m.cta.text}</a>
+      ${metaEnHtml}
+    </div>
+    <div>
+      <div class="modal-badge ${m.status}" style="float:right;">${m.statusLabelAr}</div>
+      <div style="clear:both;"></div>
+      <h2 class="modal-title-ar">${m.titleAr}</h2>
+      ${m.bodyAr}
+      ${metaArHtml}
+    </div>
+  `;
+  document.getElementById('moduleModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModule() {
+  document.getElementById('moduleModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeModule();
+});
+</script>
+
+</body>
+</html>
